@@ -10,6 +10,7 @@ import pymongo
 from dbclient import DbClient 
 import time
 import sys
+import json
  
 
 from apiclient import ApiClient 
@@ -66,6 +67,7 @@ class LinkedQuestionGetter(ApiClient):
                     content = self.getLinkedByQuestion(qid)
                     retry = False
                 except IOError as e: 
+                    print " "
                     print "meet IO error when get NO. %d, qid=%s" %(i,qid)
                     print e                    
                     time.sleep(10)
@@ -75,20 +77,21 @@ class LinkedQuestionGetter(ApiClient):
             json_data['title'] = item["title"]
             try:
                 collection.insert(json_data)
-                i+=1
-                if (i%5 == 0 ) :
-                   sys.stdout.write('.')
-                time.sleep(0.05)
+                i+=1       
             except pymongo.errors.DuplicateKeyError as e: 
                 # print e
                 ()
+            if (i%5 == 0 ) :
+                sys.stdout.write('.')
+            time.sleep(0.1)
+            
         print " "
         return i
 
         
 def main():
     pageSize = 100
-    startPageNo = 9
+    startPageNo = 12
     endPageNo = 10000
     dbClient = DbClient('localhost', 27017, "SimilarQuestion")            
     linkquestionGetter = LinkedQuestionGetter(30,"python") 
