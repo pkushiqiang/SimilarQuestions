@@ -71,6 +71,7 @@ class ApiClient:
     #    print 'url =', url
         response = urllib.urlopen(url)
         return_data = response.read()
+       # print return_data
         s = cStringIO.StringIO(return_data)
         gz_data = gzip.GzipFile(fileobj=s, mode='rb')
         content = gz_data.read()

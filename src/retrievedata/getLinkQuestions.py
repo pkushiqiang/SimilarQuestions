@@ -8,6 +8,8 @@ Created on Thu Mar 20 15:48:52 2014
 import urllib
 import pymongo
 from dbclient import DbClient 
+import time
+import sys
  
 
 from apiclient import ApiClient 
@@ -57,30 +59,45 @@ class LinkedQuestionGetter(ApiClient):
         i = 0       
         for item in items:
             qid = item["_id"]
-            content = self.getLinkedByQuestion(qid)
+            
+            retry = True           
+            while retry:
+                try:
+                    content = self.getLinkedByQuestion(qid)
+                    retry = False
+                except IOError as e: 
+                    print "meet IO error when get NO. %d, qid=%s" %(i,qid)
+                    print e                    
+                    time.sleep(10)
+                    
             json_data = json.loads(content)
             json_data['_id'] = qid
             json_data['title'] = item["title"]
             try:
                 collection.insert(json_data)
                 i+=1
+                if (i%5 == 0 ) :
+                   sys.stdout.write('.')
+                time.sleep(0.05)
             except pymongo.errors.DuplicateKeyError as e: 
                 # print e
                 ()
-        print " %d lienked question had been saved" %i
+        print " "
+        return i
+
         
 def main():
     pageSize = 100
-    startPageNo = 1
-    endPageNo = 1000
+    startPageNo = 9
+    endPageNo = 10000
     dbClient = DbClient('localhost', 27017, "SimilarQuestion")            
     linkquestionGetter = LinkedQuestionGetter(30,"python") 
     
     
     for  pg in range(startPageNo, endPageNo):
         print "--get page at : %d -----" % pg
-        linkquestionGetter.saveLinkedByIdPage(dbClient, pageSize, pg )
-      
+        i = linkquestionGetter.saveLinkedByIdPage(dbClient, pageSize, pg )
+        print " %d lienked question had been saved" %i
     
   
 if __name__ == "__main__": 

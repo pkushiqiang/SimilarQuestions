@@ -15,5 +15,11 @@ class DbClient:
     
     def getCollection(self, collection_name):
         return self.db[collection_name]
+        
+    def getPage(self, collection, pageSize, pageNo):
+        _skip = (pageNo-1) * pageSize
+        page = collection.find(skip = _skip, limit=pageSize)
+        return page        
+        
          
  
