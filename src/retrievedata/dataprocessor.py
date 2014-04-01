@@ -32,7 +32,21 @@ class DataProcessor:
              print b
              a["linked"].append(b)
          return a     
-         
+      
+    @staticmethod
+    def processRelatedQuestion(question):
+         a = {}
+         a["qid"] = question["_id"]
+         a["title"] = question["title"] 
+         a["related"] = []
+         for item in question["items"]:
+             b = {}
+             b["qid"] = item["question_id"]
+             b["title"] = item["title"] 
+         #    print b
+             a["related"].append(b)
+         return a       
+      
     
     def dumpDataToFile(self, queFun , collection, find_spec ,find_sort, fileName,pageNum):
         pageSize = 1000 
@@ -44,6 +58,7 @@ class DataProcessor:
                 page = self.dbClient.getPage(collection, find_spec ,find_sort, pageSize, pageNo)    
                 pageNo+=1 
                 count =  page.count(with_limit_and_skip = True)
+                print "count=",count
                 if ( count < pageSize ) :
                     has_more = False
                 for item in page:
@@ -66,11 +81,21 @@ class DataProcessor:
          
          self.dumpDataToFile(DataProcessor.processLinkedQuestion, question_coll, find_spec, find_sort ,fileName,pageNum)
      
-
+    def dumpRelatedQuestions(self,pageNum):
+         question_coll = self.dbClient.getCollection("related_python")
+         fileName = "..\..\data\question_related_python.txt"
+         find_spec = { "items" : { "$exists":True},  
+                  "$where" : "this.items.length > 5" } 
+         find_sort = None
+         
+         self.dumpDataToFile(DataProcessor.processRelatedQuestion, question_coll, find_spec, find_sort ,fileName,pageNum)
+       
+    
 def main():
     dataProcessor = DataProcessor()    
   #  dataProcessor.dumpPythonQuestions(1000)
-    dataProcessor.dumpLinkedQuestions(10)
+  #  dataProcessor.dumpLinkedQuestions(10)
+    dataProcessor.dumpRelatedQuestions(1000)
    
 if __name__ == "__main__": 
     main()

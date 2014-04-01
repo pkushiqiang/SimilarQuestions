@@ -17,7 +17,7 @@ from apiclient import ApiClient
 
 class LinkedQuestionGetter(ApiClient):
     
-    def __init__(self, pageSize, tagged):
+    def __init__(self, pageSize, tagged, _pre_url):
         ApiClient.__init__( self, pageSize, tagged)
         self.url_pre = 'http://api.stackexchange.com/2.2/questions/%s/linked?%s'
         
@@ -46,17 +46,18 @@ class LinkedQuestionGetter(ApiClient):
         print " %d question had been saved" %i
         
     def getQuestionIds(self, dbClient, pageSize, pageNo ):
+         print dbClient
          question_coll = dbClient.getCollection("question_test")
-         page = dbClient.getPage(question_coll, pageSize, pageNo)    
+         page = dbClient.getPage(question_coll,  None , None ,pageSize, pageNo)    
          items=[]
          for item in page:
              items.append(item)
          #    print item["_id"], item["title"]
          return items
          
-    def saveLinkedByIdPage(self, dbClient, pageSize , pageNo):
+    def saveResultByIdPage(self, dbClient,collection , pageSize , pageNo):
         items = self.getQuestionIds(dbClient, pageSize, pageNo)
-        collection = dbClient.getCollection("question_link_python")
+        collection = dbClient.getCollection(collection)
         i = 0       
         for item in items:
             qid = item["_id"]
@@ -83,25 +84,36 @@ class LinkedQuestionGetter(ApiClient):
                 ()
             if (i%5 == 0 ) :
                 sys.stdout.write('.')
-            time.sleep(0.1)
+            time.sleep(0.2)
             
         print " "
         return i
-
+        
+class RelatedQuestionGetter(LinkedQuestionGetter):
+    def __init__(self, pageSize, tagged):
+        ApiClient.__init__( self, pageSize, tagged)
+        self.url_pre = 'http://api.stackexchange.com/2.2/questions/%s/related?%s'
+        self.collectionName = "related_python"
         
 def main():
     pageSize = 100
-    startPageNo = 12
+    startPageNo = 2329
     endPageNo = 10000
     dbClient = DbClient('localhost', 27017, "SimilarQuestion")            
+    relatedQuestionGetter  = RelatedQuestionGetter(30,"python")
+    for pg in range(startPageNo, endPageNo):
+        print "--get page at : %d -----" % pg
+        i = relatedQuestionGetter.saveResultByIdPage(dbClient, "related_python", pageSize, pg )
+        print " %d related question had been saved" %i
+  
+'''  
     linkquestionGetter = LinkedQuestionGetter(30,"python") 
-    
-    
+ 
     for  pg in range(startPageNo, endPageNo):
         print "--get page at : %d -----" % pg
         i = linkquestionGetter.saveLinkedByIdPage(dbClient, pageSize, pg )
         print " %d lienked question had been saved" %i
-    
+'''    
   
 if __name__ == "__main__": 
     main()
