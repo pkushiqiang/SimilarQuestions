@@ -1,0 +1,958 @@
+{"qid": 22514186, "title": "Django inlines do not save"}
+{"qid": 22521901, "title": "Function name is not reusable (python)"}
+{"qid": 22518000, "title": "Calculate number of jumps in Dijkstra&#39;s algorithm?"}
+{"qid": 22521912, "title": "Local server giving wrong files. Is it possible I&#39;m running 2 python servers?"}
+{"qid": 22521641, "title": "Today&#39;s and tomorrow&#39;s date in YYYY-MM-DD format in PST timezone in python"}
+{"qid": 22521876, "title": "Apache on Mac using earlier Python version"}
+{"qid": 22522185, "title": "Plot a point in the onlick handler of a pyplot canvas?"}
+{"qid": 22522018, "title": "Removing a pandas column with a unicode name"}
+{"qid": 22513250, "title": "How to interact on the previous interact by python"}
+{"qid": 22519799, "title": "User registration after signup using Django 1.6"}
+{"qid": 22522231, "title": "run code/tasks in parallel from one python script?"}
+{"qid": 1567291, "title": "jinja2: get loop index of outer loop"}
+{"qid": 22521382, "title": "nonlinear colormap, matplotlib"}
+{"qid": 22518939, "title": "Error when Installing Pycurl on OS X"}
+{"qid": 22522114, "title": "Paste Script: Warning: could not load entry point app (ImportError: No module named app)"}
+{"qid": 22521739, "title": "Python iteration of list of objects &quot;not iterable&quot;"}
+{"qid": 22521993, "title": "Using the SQLAlchemy ORM, how can I get the nth column?"}
+{"qid": 22373644, "title": "new account in google+ sign in"}
+{"qid": 22521383, "title": "How to delete all none elements from a list of lists in Python"}
+{"qid": 21609985, "title": "Django: UpdateView with unique field"}
+{"qid": 22521852, "title": "Pyzmq Installation issues on Cygwin Windows"}
+{"qid": 22518050, "title": "Increasing the functionality of my Scrapy spider - Following internal links"}
+{"qid": 21748211, "title": "Python lattice paths"}
+{"qid": 22521711, "title": "Why am I getting &quot;keyword can&#39;t be an expression&quot;?"}
+{"qid": 17098005, "title": "how to loop over a list in json format"}
+{"qid": 22521608, "title": "Can&#39;t get past illogical line pep8 error"}
+{"qid": 22521414, "title": "Selecting rows from pandas by subset of multiindex"}
+{"qid": 15561785, "title": "Quicksort implement in Python run with none stop"}
+{"qid": 13412496, "title": "Python ElementTree module: How to ignore the namespace of XML files to locate matching element when using the method &quot;find&quot;, &quot;findall&quot;"}
+{"qid": 22521371, "title": "Python (2.7.6) File Checking"}
+{"qid": 22521579, "title": "Discrepencies in lengths of ints typecasted as strings"}
+{"qid": 22457211, "title": "CSV parsing in Python"}
+{"qid": 22521372, "title": "Python - adding string elements from a list into an array"}
+{"qid": 22521538, "title": "How to interface with opentsdb from Python"}
+{"qid": 22439966, "title": "syntax error during py2app build"}
+{"qid": 22513640, "title": "How do i interpret inline javascript code in python on GAE?"}
+{"qid": 22520948, "title": "How to view stdout of script run within automator"}
+{"qid": 22521397, "title": "Pip not working with python 2.7.3 on windows vista"}
+{"qid": 22520344, "title": "Testing whether or not a list modification is periodic"}
+{"qid": 22346807, "title": "How to avoid rebuilding existing wheels when using pip?"}
+{"qid": 20950295, "title": "pip install error: &quot;Unknown archive format: .whl&quot;"}
+{"qid": 20905350, "title": "Latest &#39;pip&#39; fails with &quot;requires setuptools &gt;= 0.8 for dist-info&quot;"}
+{"qid": 19575341, "title": "Build python wheels for different platforms"}
+{"qid": 18747135, "title": "Does python&#39;s new &#39;pip wheel&#39; have any support for building wheels for the dependencies listed in tests_requires?"}
+{"qid": 22521308, "title": "Does python-xdist plugin causes pytest_generate_tests to execute multiple times?"}
+{"qid": 10544067, "title": "Why can&#39;t `virtualenv` find `pkg_resources`?"}
+{"qid": 529425, "title": "Easy_install cache downloaded files"}
+{"qid": 22022778, "title": "Client server communication via sockets within same file/program in Python?"}
+{"qid": 21099057, "title": "Control the pip version in virtualenv"}
+{"qid": 21371368, "title": "Can I make a python package depend on different packages by OS?"}
+{"qid": 22521172, "title": "What is going on in this Python for loop?"}
+{"qid": 21113163, "title": "Wheel is a reference to the other Python"}
+{"qid": 22520879, "title": "Python trimming a non-standard segment in a string"}
+{"qid": 22520932, "title": "Python, remove all non-alphabet chars from string"}
+{"qid": 22520166, "title": "python query to convert rows into columns"}
+{"qid": 22271923, "title": "python decorator arguments with @ syntax"}
+{"qid": 16155494, "title": "Python Parse lines of input file"}
+{"qid": 22520749, "title": "Format printing 1 instead of True"}
+{"qid": 22510856, "title": "Checking two string in python?"}
+{"qid": 22521084, "title": "how do I run python on linux"}
+{"qid": 22520688, "title": "Django, how to update model in save() method after calling a super()?"}
+{"qid": 17074177, "title": "How to debug python CLI that takes stdin?"}
+{"qid": 21631878, "title": "Celery: is there a way to write custom JSON Encoder/Decoder?"}
+{"qid": 22446347, "title": "Redirect stdin through GUI"}
+{"qid": 22520587, "title": "Python: Permutations of 3 Elements"}
+{"qid": 22520964, "title": "Getting &#39;pred_table&#39; information for predicted values of a model in &#39;statsmodels&#39;"}
+{"qid": 22520747, "title": "Python: How to control Lineedit input and output in PyQt"}
+{"qid": 22520473, "title": "Django base64 field filtering"}
+{"qid": 22510452, "title": "Change PyFITS value"}
+{"qid": 22510990, "title": "Algorithm for resolving conflicts with overlapping choices"}
+{"qid": 22520016, "title": "Python: Centralized logging using pyzmq"}
+{"qid": 22520739, "title": "Python sort a dict by values, producing a list, how to sort this from largest to smallest?"}
+{"qid": 22514161, "title": "What is a good data structure and tool for storing and working with 200,000+ time series?"}
+{"qid": 22493492, "title": "Compare directories, delete leftover files, copy new ones"}
+{"qid": 22367106, "title": "Celery worker working from command line but not as daemon, in a virtualenv"}
+{"qid": 22508421, "title": "Encryption Cipher not filling Grid"}
+{"qid": 11881902, "title": "Python Selenium noarch RPM build failure"}
+{"qid": 19665235, "title": "Memcache client with connection pool for Python?"}
+{"qid": 22516059, "title": "Numpy summarize one array by values of another"}
+{"qid": 22515611, "title": "Django Sass Compressor django_libsass.SassCompiler: command not found"}
+{"qid": 8583615, "title": "python: check if a line has one of the strings in a list"}
+{"qid": 22519758, "title": "List of dictionaries - tracking words frequency per file"}
+{"qid": 22520386, "title": "Communicating with Jython/Java from Python (Subprocess)"}
+{"qid": 22519755, "title": "Python on screen keyboard"}
+{"qid": 22495767, "title": "Server side python code runing continuosly per session"}
+{"qid": 22408489, "title": "How to close file after using xlutils.filter"}
+{"qid": 22520280, "title": "Logging full tracebacks in Google App Engine for a flask app"}
+{"qid": 1549509, "title": "Remove duplicates in a list while keeping its order (Python)"}
+{"qid": 22519292, "title": "How can I assign a value to a different column for each row in a dataframe?"}
+{"qid": 22519520, "title": "Remove lines in file NOT containing characters in whitelist"}
+{"qid": 22519885, "title": "Unexpected behaviour of np.sum which acts as np.ravel"}
+{"qid": 22522299, "title": "Scrapy code not iterating through pages"}
+{"qid": 22519738, "title": "django forms: could not convert string to float"}
+{"qid": 22515522, "title": "Using numpy to write an array to stdout"}
+{"qid": 22517179, "title": "Put code into module, but doesn&#39;t run the same? Python"}
+{"qid": 22520160, "title": "Django logging database queries outside of requests"}
+{"qid": 22519013, "title": "When creating a wrapper class in python, how do I get the superclass&#39;s methods to return an instance of my wrapper class"}
+{"qid": 22520116, "title": "Should I use Python Flask, Djnago or Php"}
+{"qid": 22443896, "title": "Measuring proximity with bluetooth on raspberry Pi"}
+{"qid": 22520067, "title": "How to get area of image with boundary conditions?"}
+{"qid": 22511127, "title": "Python GUI WidgetWidget"}
+{"qid": 22519922, "title": "Python compare two hex values"}
+{"qid": 22519879, "title": "countdown timer in tkinter class loop - python(3.3.5rc1)"}
+{"qid": 22394552, "title": "how to keep the variable value temporary in memory and compare ... in python"}
+{"qid": 22512800, "title": "How to use pandas groupby arguments as the group index?"}
+{"qid": 22515012, "title": "Python selenium, how can i delete an element?"}
+{"qid": 22437058, "title": "Import nested Json into cassandra"}
+{"qid": 22519674, "title": "Iterate Python data structure"}
+{"qid": 22519680, "title": "Warshall&#39;s Algorithm for Transitive Closure(Python)"}
+{"qid": 22519661, "title": "TypeError: &#39;instancemethod&#39; object is unsubscriptable when using JIRA API"}
+{"qid": 22505922, "title": "Python ElementTree XML IOError: [Errno 22] invalid mode (&#39;rb&#39;) or filename"}
+{"qid": 22519474, "title": "Apply method of DataFrame vs List Comprehension"}
+{"qid": 22518156, "title": "Multiple concurrent database transactions with Django?"}
+{"qid": 22519451, "title": "K dimensions Dynamic Programming"}
+{"qid": 22518403, "title": "Unbinding all canvas items in tkinter"}
+{"qid": 22519282, "title": "Python urllib2 log and complete redirect"}
+{"qid": 22519047, "title": "How can I update a text box &#39;live&#39; in tkinter?"}
+{"qid": 22510123, "title": "reading individual bytes of multiple binary files using the Python module fileinput"}
+{"qid": 22519398, "title": "Find element by xpath in selenium, with partial match"}
+{"qid": 22519318, "title": "REGEX - Differences between `^`, `$` and `\\A`, `\\Z`"}
+{"qid": 22519293, "title": "Python : go backwards through a string, then remove everything after a specific character"}
+{"qid": 22516474, "title": "import error in pytest"}
+{"qid": 22518191, "title": "How does one go about creating patterns in Python or any other programming language?"}
+{"qid": 7255463, "title": "Exit while loop by user hitting ENTER key"}
+{"qid": 22518954, "title": "Python: add 1 to each digit that is an integer"}
+{"qid": 22515901, "title": "thread not working as expected"}
+{"qid": 21498633, "title": "Python LSI using gensim not working"}
+{"qid": 22518489, "title": "using ipython notebook remotely by ssh twice"}
+{"qid": 22518428, "title": "How to resize column to content in ReportLab?"}
+{"qid": 22519259, "title": "Python QTimer multiple instances"}
+{"qid": 22518996, "title": "adding a new row in pandas based on a certain condition? python"}
+{"qid": 22519143, "title": "Display long text using django template variable"}
+{"qid": 22518703, "title": "Escape Sequences Exercise in Python"}
+{"qid": 22519068, "title": "Add a python library inside a python code"}
+{"qid": 22518839, "title": "PyCharm Community: How to properly configure it to run Django Tests fine?"}
+{"qid": 22518587, "title": "Python : Get list by index not key in defaultdict"}
+{"qid": 11285564, "title": "accessing google account via python"}
+{"qid": 22519008, "title": "Garbage uint64 values from ctypes"}
+{"qid": 22519003, "title": "Changing Opaque Object Render Order (Z-Order) VTK"}
+{"qid": 930397, "title": "How to get the last element of a list?"}
+{"qid": 22518828, "title": "Type Error: Missing one positional argument &quot;self&quot; Conway&#39;s Game of Life"}
+{"qid": 22500267, "title": "Type classes in dynamic languages"}
+{"qid": 22517991, "title": "Return count of column based on previous data"}
+{"qid": 22518927, "title": "Error trying to install argh-0.24.1 Python 3.2"}
+{"qid": 22518641, "title": "Why does this bitwise operation not give same result in python and js?"}
+{"qid": 22518856, "title": "pandas: stacking multi-index (`cannot handle a non-takeable non-unique multi-index!`)"}
+{"qid": 22518457, "title": "Pythonic way of checking bit values"}
+{"qid": 22517108, "title": "python: help in calculation a proportion of 1&#39;s in binary sequence"}
+{"qid": 22515702, "title": "adding next.line() style argument within iterator loop"}
+{"qid": 22517816, "title": "How to mix *args, **kwargs and named arguments in decorator"}
+{"qid": 21521587, "title": "Installing pycurl on mac"}
+{"qid": 22518701, "title": "python toolbox and python scripting tool"}
+{"qid": 22512073, "title": "Need console input from stdin when process started from java parent"}
+{"qid": 22518323, "title": "In Python I put print() but still get a syntax error"}
+{"qid": 22514427, "title": "Best way to create a dictionary for a later comparison of the elements"}
+{"qid": 22518647, "title": "Bpython not working after upgrading to Mavericks"}
+{"qid": 22517757, "title": "scrapy the spider crawls ursl although the request_seen returns true"}
+{"qid": 22518278, "title": "Python - mangle function"}
+{"qid": 22513798, "title": "CSS in PyQt4 showing error"}
+{"qid": 22518230, "title": "Creating a threshold-coded ROC plot in Python"}
+{"qid": 21733706, "title": "django-mongodb-engine and Django&#39;s native auth system"}
+{"qid": 22518497, "title": "Ignore redefinition of operator&lt;&lt; in swig interface"}
+{"qid": 22361491, "title": "SingPath Quicksort Private Tests Failed"}
+{"qid": 22518244, "title": "How to debug javascript in Eclipse served by a Django Server"}
+{"qid": 22517994, "title": "Python: Shifted Averaging And Space Delimiting"}
+{"qid": 22517080, "title": "Print Levels Of A Binary Tree by Level Iteratively"}
+{"qid": 22492230, "title": "Recovering memory scipy interpolation"}
+{"qid": 22516656, "title": "Python list comprehension for csv file row extraction not evaluating correctly"}
+{"qid": 22518317, "title": "Getting pdfkit to work with ipython"}
+{"qid": 22513656, "title": "PySide - class variable cannot be modified"}
+{"qid": 22518227, "title": "What is the difference between %s and %r in python?"}
+{"qid": 22517838, "title": "Python - Import all files in a directory tree"}
+{"qid": 22517827, "title": "Laplacian with different kernel"}
+{"qid": 22515564, "title": "extract certain paragraph from text"}
+{"qid": 22517945, "title": "Filtering permutations of strings"}
+{"qid": 22517885, "title": "How to create a python class"}
+{"qid": 22517656, "title": "Regular expressions: How do I find a sub-string that is between two regular expression matches?"}
+{"qid": 22517948, "title": "Why does date.today() return time as well?"}
+{"qid": 22517928, "title": "Celery - Django web app on Heroky with Celery worker process - how can I chase down this memory leak?"}
+{"qid": 22517284, "title": "Global Variables - Python"}
+{"qid": 22510329, "title": "What do the chars %7D mean in an url query?"}
+{"qid": 22517691, "title": "python how to use getattr on a class"}
+{"qid": 22517758, "title": "Project Euler: #5 (Python)"}
+{"qid": 22517167, "title": "Slicing pandas dataframe by column numbers I don&#39;t want"}
+{"qid": 22517820, "title": "python ast - does the ast support try, except"}
+{"qid": 22507252, "title": "emacs Jedi disable #"}
+{"qid": 22517741, "title": "Django crispy-forms InlineCheckboxes as list"}
+{"qid": 22517726, "title": "How to replicate django&#39;s password validation in ruby?"}
+{"qid": 22517626, "title": "How to write ASN1 encoding in python using PyASN INTEGER (1..MAX)?"}
+{"qid": 11893034, "title": "Mouse wheel in python curses"}
+{"qid": 22508871, "title": "Transcribe Excel Workbooks via python without spoiling the fancy formatting"}
+{"qid": 22517619, "title": "iPython Notebook not displaying graphs correctly"}
+{"qid": 22517604, "title": "Bind to LDAP after SSO?"}
+{"qid": 17165500, "title": "Inspecting source code with vim, ctags and other tools"}
+{"qid": 21856048, "title": "Can I convert an egg to wheel?"}
+{"qid": 22517048, "title": "Why is all() slower than many &quot;and&quot; commands? Python"}
+{"qid": 22517503, "title": "NLTK problems with proper nouns"}
+{"qid": 22517387, "title": "associating names with nested lists"}
+{"qid": 5119709, "title": "&#39;True&#39; and &#39;False&#39; in Python"}
+{"qid": 5224103, "title": "Unable to Extract Rich Text ---DOC, DOCX"}
+{"qid": 22517190, "title": "Django gives &quot;GET /static/css/style.css HTTP/1.1&quot; 304 0"}
+{"qid": 22516805, "title": "Random six letter string in Python"}
+{"qid": 22517010, "title": "foreman start no module named myapp"}
+{"qid": 11340765, "title": "Default window colour Tkinter and hex colour codes"}
+{"qid": 22516635, "title": "List inside of List Comprehension"}
+{"qid": 22348480, "title": "Implementing user-session management in Tornado?"}
+{"qid": 22517043, "title": "Preserve special characters in QueryDict from Form (Django)"}
+{"qid": 21055859, "title": "What are the risks of running &#39;sudo pip&#39;?"}
+{"qid": 22516061, "title": "Logging my own messages in flask"}
+{"qid": 14987185, "title": "How to schedule weekday-aware jobs in celery"}
+{"qid": 22517100, "title": "In Python: saving Unicode letters with newlines into a .txt so that it works fine while opening both using Excel and a text editor"}
+{"qid": 21949051, "title": "Pygame - How can I change palette of parent surface and affect all children?"}
+{"qid": 22511822, "title": "Haskell equivalent of this Python code"}
+{"qid": 22517005, "title": "UnboundLocalError passing list from function to function. Global is declared"}
+{"qid": 22493899, "title": "Python Program Error 22 Invalid argument"}
+{"qid": 22413211, "title": "Can&#39;t fix position of colorbar in image with multiple subplots"}
+{"qid": 22516930, "title": "Using python to generate configuration file"}
+{"qid": 22513717, "title": "AttributeError: &#39;class1&#39; object has no attribute &#39;append&#39;"}
+{"qid": 22499477, "title": "using BeautifulSoup to pick up texts separated by &quot;:&quot;"}
+{"qid": 22516934, "title": "Pycharm - syntax highlight python constants"}
+{"qid": 22444378, "title": "Simple way to display thumbnails using wxPython"}
+{"qid": 22516815, "title": "Most efficient way (time and space wise) to send binary data in response"}
+{"qid": 18948491, "title": "Running Python code in Vim"}
+{"qid": 22516622, "title": "Extracting the part of the string"}
+{"qid": 22516690, "title": "Fabric and Jenkins on CentOS 6.4 /bin/bash can&#39;t find binaries"}
+{"qid": 22513304, "title": "how can i set input type to bytes (python)"}
+{"qid": 22515877, "title": "Eddited XML File with certain element"}
+{"qid": 17634824, "title": "search for identical segments in DNA sequence"}
+{"qid": 15316117, "title": "comparison between three parameters"}
+{"qid": 17903114, "title": "Slicing fasta file"}
+{"qid": 17936166, "title": "Unable to parse just sequences from FASTA file"}
+{"qid": 22501604, "title": "Using QT Designer and PyQt, how do I fill an empty widget defined in one .ui file with a widget defined in another .ui file?"}
+{"qid": 3675585, "title": "How to add python &quot;libraries&quot; to Eclypse and pydev"}
+{"qid": 22514718, "title": "Python: Strange output for threaded ARP ping"}
+{"qid": 22503178, "title": "Scan complete directory tree using pep8"}
+{"qid": 22516213, "title": "pysvn obtaining file mode (symlink, executable, file, or dir) from http request"}
+{"qid": 22515756, "title": "Using os.walk to get my file path in Python"}
+{"qid": 603852, "title": "Multicast in Python"}
+{"qid": 22511568, "title": "How to cache data to be used in multiple ways at a single URL"}
+{"qid": 22497579, "title": "How do you properly load a python(3.0) function in c++"}
+{"qid": 22515672, "title": "how to upload an image?"}
+{"qid": 22516007, "title": "python pause pexpect.spawn and its used devices"}
+{"qid": 22514511, "title": "Joining a list into a string in python"}
+{"qid": 22515958, "title": "Pitch and Roll with acceleration greater than +/- 1g"}
+{"qid": 22492239, "title": "Vim - YouCompleteMe auto selects first option"}
+{"qid": 22515200, "title": "BoxSizer in Frame and Panel"}
+{"qid": 7438046, "title": "Error in clips.BuildRule"}
+{"qid": 675442, "title": "Comment out a Python code block"}
+{"qid": 2972212, "title": "Creating an empty list in Python"}
+{"qid": 22515745, "title": "What are the choices for designing a website?"}
+{"qid": 14519538, "title": "how to get vectors from font"}
+{"qid": 21701174, "title": "ImportError: No module named flask.ext.login"}
+{"qid": 22480044, "title": "Dajaxice callback function called twice"}
+{"qid": 22272616, "title": "Inexpensive way to add time series intensity in python pandas dataframe"}
+{"qid": 11181053, "title": "django development server quitting"}
+{"qid": 22514239, "title": "Can Views in django embeded in each other?"}
+{"qid": 22515009, "title": "Basic Python problems. ((self) parameter, for loop and bubblesort)"}
+{"qid": 22462369, "title": "Making email field mandatory in Django"}
+{"qid": 22514216, "title": "Django ad renewal notification"}
+{"qid": 22510205, "title": "all vs and AND any vs or"}
+{"qid": 397148, "title": "Why doesn&#39;t Python have multiline comments?"}
+{"qid": 22515491, "title": "How to start a sentry on shared hosting"}
+{"qid": 22158635, "title": "Graphite and GUnicorn - Config issue or path issue"}
+{"qid": 22515120, "title": "Python - Adding a state to a program"}
+{"qid": 22514730, "title": "cpython vs cython vs numpy array performance"}
+{"qid": 22514846, "title": "Print parameters passed to the function"}
+{"qid": 22502948, "title": "In sklearn elastic net how does the alpha and l1_ratio relate to lambda_1 and lambda_2"}
+{"qid": 13984066, "title": "Pygame restart?"}
+{"qid": 22515241, "title": "IPython kernel restarts after installing new module"}
+{"qid": 22511604, "title": "Get the value from a placeholder to send it in the form django"}
+{"qid": 22498128, "title": "SWIG Python fixed size array passed by reference"}
+{"qid": 4003104, "title": "Can a program call itself?"}
+{"qid": 5178292, "title": "pip install mysql-python fails with EnvironmentError: mysql_config not found"}
+{"qid": 22468098, "title": "VTK:update image in renderwindow fails in specific cases"}
+{"qid": 20721305, "title": "In Django 1.61 shell using Aptana 3.4 the setup_environ(settings) is missing"}
+{"qid": 22515113, "title": "Using Mysqldb module when writing to TIME datatype column"}
+{"qid": 22514857, "title": "Python class specific global attributes"}
+{"qid": 22492162, "title": "Understanding the main method of python"}
+{"qid": 22514500, "title": "keeping &quot;global&quot; variables in flask blueprints"}
+{"qid": 22514913, "title": "obtaining the imported certificate in the browser programmatically _?"}
+{"qid": 22487546, "title": "Finding cycles in weighted directed multi graph (Gephi, Jython, Python)"}
+{"qid": 22514896, "title": "error in using curve_fit function to sympy function"}
+{"qid": 22514178, "title": "Python, sort a dict to represent a histogram"}
+{"qid": 22513445, "title": "python handles long ints differently on Windows and Unix"}
+{"qid": 22514728, "title": "Pdf file upload app in django in view only mode"}
+{"qid": 22511550, "title": "GridSpec with shared axes in Python"}
+{"qid": 7171140, "title": "Using Python Iterparse For Large XML Files"}
+{"qid": 22337446, "title": "How to wait for a child process to finish in Node.js?"}
+{"qid": 22512733, "title": "How to monitor Cpu usage for my commands?"}
+{"qid": 1937622, "title": "Convert date to datetime in Python"}
+{"qid": 22167975, "title": "Weird pdfs from fitted data"}
+{"qid": 22205730, "title": "Matplotlib, 3D logaxis, incomplete figure"}
+{"qid": 22514033, "title": "Python Objects Types"}
+{"qid": 22436119, "title": "How to send an image in ICMP data field using ICMP"}
+{"qid": 22511787, "title": "How to use statsmodels to fit data"}
+{"qid": 22511090, "title": "Python; class instances"}
+{"qid": 10008144, "title": "Creating an ICMP traceroute in Python"}
+{"qid": 22514400, "title": "LUA 5.1 and python classes"}
+{"qid": 22514140, "title": "Iterating a loop using time in python (no date involved)"}
+{"qid": 22513847, "title": "Need to create a median function that draws from a dictionary"}
+{"qid": 22502741, "title": "Invalid field Raw in an ICMP destination unreachable (port unreachable) packet"}
+{"qid": 22510934, "title": "Specifying the body content in a post using requests(python)"}
+{"qid": 22469107, "title": "Customizing admin-site: delete_selected"}
+{"qid": 22508606, "title": "python find and match exact string"}
+{"qid": 22514121, "title": "How can I wait for child processes?"}
+{"qid": 21925671, "title": "Convert Django Model object to dict with all of the fields intact"}
+{"qid": 4023039, "title": "Intels Open Source uPNP SDK Has absolutely 0 documentation, why?"}
+{"qid": 22234609, "title": "Defunct processes using CPU"}
+{"qid": 22510595, "title": "Send multi oid to pysnmp through func"}
+{"qid": 22513133, "title": "Python CSV Module behaving unexpectedly"}
+{"qid": 22513844, "title": "How to store/deal with django exception webpages in acceptance testing"}
+{"qid": 22514050, "title": "How to solve a binary linear program with cvxopt? Python"}
+{"qid": 7396849, "title": "Convert Binary to ASCII and vice versa (Python)"}
+{"qid": 22513306, "title": "Python Pandas: how to compute the difference between two datetime.time columns?"}
+{"qid": 22513310, "title": "Python: Print Duplicate Lines from Text File Then Delete All but One of the Duplicates"}
+{"qid": 1448429, "title": "How to install MySQLdb (Python data access library to MySQL) on Mac OS X?"}
+{"qid": 22513915, "title": "Installing pyquery mac"}
+{"qid": 22512608, "title": "How to update data in a Django queryset during a loop over it?"}
+{"qid": 22490257, "title": "AWS EC2 not running web server on default port"}
+{"qid": 22513466, "title": "Caching data on backend side with Django (scalable applications)"}
+{"qid": 22513623, "title": "take a video with VideoCapture Python"}
+{"qid": 22512951, "title": "Python multiprocessing an enourmous amount of data"}
+{"qid": 22505305, "title": "Make the userpicture a link"}
+{"qid": 22513649, "title": "Return value From Fucntion to Traits GUI"}
+{"qid": 22513628, "title": "raw http get request with python not working"}
+{"qid": 2537319, "title": "How do I have unsigned fields in Django?"}
+{"qid": 22511262, "title": "python/jython queue requests to script"}
+{"qid": 22493577, "title": "Efficiently remove lines from fileA that contains string from fileB"}
+{"qid": 22513530, "title": "emacs and iPython notebook: how to see entire documentation tooltip?"}
+{"qid": 22513436, "title": "using regexp_like() in sql query through python"}
+{"qid": 22513372, "title": "How to track a person though 2 webcams?"}
+{"qid": 22513358, "title": "UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode while exporting csv to mysql"}
+{"qid": 22513012, "title": "creating a Python program that adds weight of coins and adds the height"}
+{"qid": 22507354, "title": "stdout of a process to a file in python"}
+{"qid": 11880430, "title": "python inline if statement"}
+{"qid": 20981303, "title": "Using EC2 with auto scaling group for a batch image-processing application on AWS"}
+{"qid": 22490202, "title": "Is there any way to distinguish between not done and blocked with Popen.poll()"}
+{"qid": 22512711, "title": "Python Evaluating Infix Notation using Stacks issue"}
+{"qid": 16842001, "title": "Copy text between parentheses in pandas DataFrame column into another column"}
+{"qid": 22492484, "title": "How do I get the IP address from a http request using the requests library?"}
+{"qid": 22509856, "title": "Embedd Matplotlib chart in a PyQt GUI"}
+{"qid": 3363395, "title": "how to receive a socket message with an empty data?"}
+{"qid": 22512869, "title": "Delete same rows from list of lists in python"}
+{"qid": 22512803, "title": "Create required number of sockets during execution"}
+{"qid": 22505827, "title": "Python- How can I randomise questions that have an A,B,C,D"}
+{"qid": 22307730, "title": "facebook authorization error (fandjango)"}
+{"qid": 22512462, "title": "Matching words within words Python"}
+{"qid": 22461795, "title": "How to edit flask-admin to support multi tenancy?"}
+{"qid": 22510731, "title": "Finding equality between different strings that should be equal"}
+{"qid": 22512782, "title": "Multi-cast Batch Messaging in mazon Device Messaging (ADM)"}
+{"qid": 22512677, "title": "How to import module from folder"}
+{"qid": 22492457, "title": "s3 boto not uploading file correctly django"}
+{"qid": 22511247, "title": "Javascript - how to load the javascript library while using Google App Engine?"}
+{"qid": 19067341, "title": "Using salt-api to call salt-key remotely"}
+{"qid": 22512229, "title": "Why does my html form fields reset? (django project deployed on heroku)"}
+{"qid": 22512629, "title": "How to insert uWSGI spool files entry meta data into a database table?"}
+{"qid": 22511912, "title": "Interactively watch code in python debugger pdb"}
+{"qid": 22510602, "title": "Using Mixer with Flask-SQLAlchemy"}
+{"qid": 22512054, "title": "Authenticating API calls using requests and requests-oauthlib in Python 3.3"}
+{"qid": 22509946, "title": "POST request in Python returns urllib2.HTTPError: HTTP Error 400: Bad Request"}
+{"qid": 9415785, "title": "merging &quot;several&quot; python dictionaries"}
+{"qid": 22419074, "title": "Where to start to write a Python script for sync local directory to Google Drive?"}
+{"qid": 22511792, "title": "Python &quot;from [dot]package import ...&quot; syntax"}
+{"qid": 8919627, "title": "How to determine the IP address of the server after connecting with urllib2?"}
+{"qid": 22158395, "title": "ArtistAnimation vs FuncAnimation matplotlib animation matplotlib.animation"}
+{"qid": 17619964, "title": "iframe not rendering in ipython-notebook"}
+{"qid": 22507449, "title": "Fetch data to and from a website"}
+{"qid": 2856847, "title": "How does Python&#39;s website generate its online documentation?"}
+{"qid": 22512321, "title": "Can you display python web code in Joomla?"}
+{"qid": 5072086, "title": "Building Python on Unix"}
+{"qid": 22511823, "title": "How to reference an element of a list inside itself?"}
+{"qid": 22511945, "title": "how to delete a record by using a class method?"}
+{"qid": 22488460, "title": "Time signal shifted in amplitude, FIR filter with scipy.signal"}
+{"qid": 22511896, "title": "split input into lines instead of limiting lines"}
+{"qid": 22499535, "title": "How to retrieve submitted changelists in a day using Perforce Python API"}
+{"qid": 22512109, "title": "python - export blender data to excel"}
+{"qid": 22512100, "title": "Unable to install JRE 7_51 on OSX Mavericks"}
+{"qid": 22258247, "title": "Natural sort of a list of lists based on an alphanumeric string within sub-list?"}
+{"qid": 22510985, "title": "Python - convert elapsed time to seconds when format is not consistent"}
+{"qid": 22511298, "title": "Using dictionary for matrix factorization and factor vector growing bigger and bigger"}
+{"qid": 22404799, "title": "Volatile table can not be create in python importing pyodbc"}
+{"qid": 20508494, "title": "Why does manage.py syncdb fail to connect to google cloud sql database?"}
+{"qid": 22511059, "title": "Django generic UpdateView: Getting the object to be updated"}
+{"qid": 22496609, "title": "Translate Python or Java to php"}
+{"qid": 4676728, "title": "Value error trying to install Python for Windows extensions"}
+{"qid": 4016855, "title": "Python: Where is freeze.py?"}
+{"qid": 22511023, "title": "Python: Primes using Sieve of Eratosthenes and dictionary"}
+{"qid": 22508593, "title": "Numpy Polyfit or any fitting to X and Y multidimensional arrays"}
+{"qid": 22511496, "title": "Python: AttributeError: &#39;module&#39; object has no attribute &#39;socketpair&#39;"}
+{"qid": 22511472, "title": "wxPython : GDI ressources are not release after wxFrame.destroy()"}
+{"qid": 2817264, "title": "how to get the parent dir location using python"}
+{"qid": 22511222, "title": "reading the first character of each line to an array"}
+{"qid": 8853063, "title": "PEP 8, why no spaces around &#39;=&#39; in keyword argument or a default parameter value?"}
+{"qid": 21662943, "title": "Django: render staticfiles through template engine at deploy-time"}
+{"qid": 22511403, "title": "turbogear menu link redirects"}
+{"qid": 22511387, "title": "Terminating a Celery task subprocess, whilst ensuring cleanups"}
+{"qid": 22509908, "title": "Checking if function was not called for x amount of time"}
+{"qid": 22510701, "title": "What does second number in &quot;POST /myfunction/ HTTP/1.1&quot; 200 23&quot; mean?"}
+{"qid": 22509189, "title": "Using dictionary for matrix factorization and &quot;nan&quot; came up in dictionary.values()"}
+{"qid": 22510498, "title": "SQLAlchemy: how to perform regexp_replace on column values"}
+{"qid": 22510339, "title": "How to calculate ts1 - ts2.interpolate(index=ts1.index)"}
+{"qid": 22511076, "title": "Kivy: How to call something on button on_press"}
+{"qid": 22511070, "title": "SQLAlchemy ForgeinKeys not found (joins Many to Many)"}
+{"qid": 22511054, "title": "Python: Plotting Contours from 3 vectors"}
+{"qid": 22485959, "title": "Splitting of a heavy size file into smaller ones based on heading in python"}
+{"qid": 22503155, "title": "Authenticate windows user in Python / C"}
+{"qid": 22511006, "title": "Python Excel controlling 3rd party add in"}
+{"qid": 22442564, "title": "Facebook Graph API: Making public post on user&#39;s page"}
+{"qid": 22508259, "title": "Filters / Scipy return"}
+{"qid": 22477034, "title": "Set file properties in Python"}
+{"qid": 22505242, "title": "How to avoid UnicodeDecodeError in flask/python?"}
+{"qid": 22510092, "title": "Issue rendering information from views.py django 1.6"}
+{"qid": 22510158, "title": "Setting and storing a global boolean variable"}
+{"qid": 22470483, "title": "how to set argparse to exclude optional argument by values of positional argument"}
+{"qid": 22510743, "title": "python urllib2 requests session"}
+{"qid": 22509020, "title": "Payment gateways and Django/Python"}
+{"qid": 7915238, "title": "How to read HTML parameters from CherryPy?"}
+{"qid": 22510625, "title": "Preventing thread duplication in a multiprocessed Python app"}
+{"qid": 22508028, "title": "Printing levels of Binary Search Tree"}
+{"qid": 22510107, "title": "Variational Inference in Python"}
+{"qid": 22501249, "title": "Button with an image not showing up in wxPython"}
+{"qid": 22509663, "title": "How can I include grandchildren with flask-restless?"}
+{"qid": 22509683, "title": "Program not running at all"}
+{"qid": 10508021, "title": "Matrix Multiplication in python?"}
+{"qid": 22506815, "title": "How to combine these lists in one single list?"}
+{"qid": 22509423, "title": "Does there exist empty class in python?"}
+{"qid": 22485990, "title": "Apply upper and lower bounds to Pandas Dataframe"}
+{"qid": 22509345, "title": "Time column in mysql table"}
+{"qid": 22509916, "title": "Need more clarification of SEQUENCE TRANSFORMATION challenge of Codeeval"}
+{"qid": 22504937, "title": "pip does not upgrade packages"}
+{"qid": 22509675, "title": "Unable to write to file in&quot;w&quot; mode (IOError: [Errno 2] No such file or directory: &#39;items.csv&#39;)"}
+{"qid": 22493293, "title": "group lines in a csv when reading"}
+{"qid": 19500832, "title": "How to create nested listboxes in urwid?"}
+{"qid": 22460580, "title": "Tkinter Switching between sibling Windows (Half Answered)"}
+{"qid": 22509854, "title": "py2exe adding binary dependencies for random numpy and scipy libraries"}
+{"qid": 22438453, "title": "Interact between django and ejabberd for web chat app"}
+{"qid": 22506193, "title": "Is there a better algorithm for exercise 9.3 in \u300aThink Python: How to Think Like a Computer Scientist\u300b"}
+{"qid": 22507746, "title": "Cleaning up after a unit test that asserts an IntegrityError is thrown"}
+{"qid": 22509604, "title": "Pythonic way to literally &#39;open&#39; and &#39;display&#39; the text file?"}
+{"qid": 22509698, "title": "Use a custom form for FeinCMS ApplicationContent"}
+{"qid": 22509530, "title": "Properly saving the output of FileReader::readAsDataUrl to a file with python"}
+{"qid": 22479669, "title": "Running 2 Python scripts concurrently with Boost Python embedded in C++"}
+{"qid": 2846653, "title": "Python multithreading for dummies"}
+{"qid": 22509541, "title": "Passing/modifying closures between threads in Python"}
+{"qid": 22421841, "title": "Anaconda ipython-notebook getting &quot;UnicodeDecodeError: &#39;ascii&#39; codec can&#39;t decode byte 0xb0 in position 1&quot;"}
+{"qid": 22435764, "title": "SSL syscall error bad file descriptor using sqlalchemy and postgres"}
+{"qid": 22491523, "title": "How can I get a list of all file names having same prefix on Amazon S3?"}
+{"qid": 22509449, "title": "Timezone conversion shows an offset of an hour more in OpenShift"}
+{"qid": 22508932, "title": "Determine whether a character is not in a set of paranthesis at an index?"}
+{"qid": 22508665, "title": "translating bash script to python"}
+{"qid": 22508911, "title": "Hide sections of the UI or backend functions from user in django application"}
+{"qid": 6192265, "title": "Celery and Python&#39;s logging"}
+{"qid": 22508917, "title": "A few basic questions about encoding, unicode and stdout"}
+{"qid": 20207054, "title": "Linear decrease of a sound in Jython -- variable trouble"}
+{"qid": 22508486, "title": "How do you keep an input string from printing if you have not told it to print"}
+{"qid": 22508951, "title": "install pillow - error: ld returned 1 - windows"}
+{"qid": 22494304, "title": "Tkinter/Python and Arduino"}
+{"qid": 22506704, "title": "Finding the index of array in each grid cell?"}
+{"qid": 22323695, "title": "Mapping a table function to a model using SQLAlchamy"}
+{"qid": 15732608, "title": "How to control Enttec Open DMX USB via Python?"}
+{"qid": 22444393, "title": "install SWIG python package in windows"}
+{"qid": 10605047, "title": "Django - Using F() expression but obtaining non atomic update"}
+{"qid": 22493538, "title": "Setting axis properties on axis-sharing plots"}
+{"qid": 22467699, "title": "Running python in Sublime Text 2 getting error"}
+{"qid": 22488566, "title": "How to paste a Numpy array to Excel"}
+{"qid": 22505478, "title": "Show every element in list"}
+{"qid": 22507930, "title": "Zero keypoints detection using ORB descriptor"}
+{"qid": 22508235, "title": "Sum 2 columns of pandas DataFrame with a row condition"}
+{"qid": 22508353, "title": "python urlib2 https authentication"}
+{"qid": 22508152, "title": "looping in python and checking for logic in try/except method"}
+{"qid": 22485302, "title": "Tkinter listbox - Incorrect number of bindings supplied"}
+{"qid": 22508315, "title": "MongoDB random query with search criteria"}
+{"qid": 22508136, "title": "Python Telnet connection - Cannot send special character FF\u20ac"}
+{"qid": 20550094, "title": "In twisted, what is the difference between protocols.basic.LineReceiver and internet.protocol.Protocol?"}
+{"qid": 22423906, "title": "Is it possible to stream output from a python subprocess to a webpage in real time?"}
+{"qid": 6297404, "title": "Multi-threaded use of SQLAlchemy"}
+{"qid": 22507530, "title": "split a string at a certain index"}
+{"qid": 22508242, "title": "News Clustering Algorithm"}
+{"qid": 4834415, "title": "Does Django&#39;s south (migration tool) work for innodb?"}
+{"qid": 22507091, "title": "Replace apostrophe in unicode"}
+{"qid": 22507197, "title": "merging two sorted linked lists into one linked list in python"}
+{"qid": 22498375, "title": "finding connected components in an image using python"}
+{"qid": 22507337, "title": "Retrieving list item values"}
+{"qid": 22508042, "title": "Python and Scaling Up the Resolution"}
+{"qid": 22507342, "title": "Using Malayalam unicode in python"}
+{"qid": 22507939, "title": "How to find out the value of the surface plotted by plot_surface in a given point?"}
+{"qid": 22220856, "title": "Selenium crashes after running around 500 tests"}
+{"qid": 22468202, "title": "How to create a Numpy array from a large list of list- python"}
+{"qid": 22506955, "title": "How to utilize django generic view?"}
+{"qid": 22506968, "title": "Matplotlib Radiobutton doesn&#39;t work anymore after clf()"}
+{"qid": 22507747, "title": "Regular expression in Python - matches on multiple lines"}
+{"qid": 21848680, "title": "Unable to call python Function in Webkit report Openerp"}
+{"qid": 22507576, "title": "Encoded traffic python socket"}
+{"qid": 22506827, "title": "How to store multiple related time series in Pandas"}
+{"qid": 22507707, "title": "Finding largest eigenvalue in sparse matrix"}
+{"qid": 22423510, "title": "NDB: how to get child entities that depend on values stored on a parent structured propery"}
+{"qid": 22506410, "title": "Multiple Instantiation of Programs interacting with one another (Python2.7 &amp; Tkinter)"}
+{"qid": 5833642, "title": "python: APNs SSLError"}
+{"qid": 22507626, "title": "Accessing the first returned object in python"}
+{"qid": 22507716, "title": "django-oauth2-provider: get the token without sending the client_secret"}
+{"qid": 22507691, "title": "How to get a file close event on mac osx using python"}
+{"qid": 22507281, "title": "Find Node value in xml using etree"}
+{"qid": 16237137, "title": "What is termios.TIOCGWINSZ"}
+{"qid": 22490872, "title": "Django how to use template tag - Imagekit app"}
+{"qid": 442188, "title": "ReadInt() ReadByte() ReadString() etc in Python?"}
+{"qid": 22507429, "title": "Filter for Image Processing using Scypy"}
+{"qid": 22507052, "title": "Errors reloading SciPy"}
+{"qid": 22506186, "title": "Moving data from MySQL to mongoDB via Python - unicode string error"}
+{"qid": 22503508, "title": "Django - Hacking attempt, [Django] ERROR: Invalid HTTP_HOST header"}
+{"qid": 22482537, "title": "Parsing svg in python"}
+{"qid": 22507269, "title": "Why pydevd.settrace() called in the global scope of a module doesn&#39;t work?"}
+{"qid": 7839413, "title": "Python numpy compute first eigenvalue and eigenvector"}
+{"qid": 22506246, "title": "Packaging and argparse"}
+{"qid": 22507082, "title": "Python 3.3 How to express &quot;while 1: statement&quot; in an expression?"}
+{"qid": 22502851, "title": "Concurrent i/o and processing for large data files in python"}
+{"qid": 22507073, "title": "OverflowError when debugging a script that uses Matplotlib with PyTools"}
+{"qid": 19631698, "title": "Handling 128-bit integers with ctypes"}
+{"qid": 22506633, "title": "Is it possible to nest if statement in for loop in Django template"}
+{"qid": 22041708, "title": "Memory leak in Python-script using VTK"}
+{"qid": 22404273, "title": "EPSG:900913 to WGS 84 projection"}
+{"qid": 16994174, "title": "In Flask: How to access app Logger within Blueprint"}
+{"qid": 22491030, "title": "Python-Looping through all files in a folder"}
+{"qid": 22506091, "title": "how to pass special characters into ng-init in angularjs from python"}
+{"qid": 22100846, "title": "Python/ spyder new installation breakpoints not being hit, plus &#39;sitecustomize&#39; opening on every .py run"}
+{"qid": 19641252, "title": "Running arbitrary unfriendly Python code on my server"}
+{"qid": 22431420, "title": "Importing .ui in pyqt?"}
+{"qid": 22506282, "title": "How to execute this command line with Python in Window system"}
+{"qid": 22506504, "title": "suspend maya python excecution, then continue"}
+{"qid": 22498939, "title": "Running a python web service on heroku"}
+{"qid": 10047110, "title": "Is it possible to pass arguments to a python made exe at runtime?"}
+{"qid": 22506298, "title": "Checking if a button has been pressed in python?"}
+{"qid": 22469490, "title": "Appending subelements to xml etree in a loop: preventing duplicates"}
+{"qid": 22501259, "title": "Embed matplotlib colorbar in PyQt"}
+{"qid": 22506064, "title": "python - Django model query"}
+{"qid": 22506268, "title": "Weibull Censored Data"}
+{"qid": 22489264, "title": "Is a countvectorizer the same as tfidfvectorizer with use_idf=false?"}
+{"qid": 22505881, "title": "Can I use urlllib2 to play videos?"}
+{"qid": 22505499, "title": "Quick sort and setting the limit of recursion"}
+{"qid": 22506010, "title": "Python Django models execute a join query"}
+{"qid": 8772499, "title": "Django project using wrong (old) database settings"}
+{"qid": 22505001, "title": "Program identification in HTML page"}
+{"qid": 22464545, "title": "Dynamic multiple lines refresh printing in Python"}
+{"qid": 22502313, "title": "python Notebook: Changing the written file"}
+{"qid": 22501755, "title": "Django module filtering on template"}
+{"qid": 22483266, "title": "python django framework pagination of html tables"}
+{"qid": 22505622, "title": "Passing a variable to a subprocess call"}
+{"qid": 22504329, "title": "Pandas variable creation using multiple If-else"}
+{"qid": 15100197, "title": "melting uniquely indexed pandas dataframes for use with ggplot/rpy2"}
+{"qid": 22505147, "title": "How to keep the value of a variable despite function being called multiple times?"}
+{"qid": 22505412, "title": "Running a python file in a directory"}
+{"qid": 22505392, "title": "Python raven. Send part of frames"}
+{"qid": 22504960, "title": "Running `manage.py` for `makemessages` from another directory"}
+{"qid": 22502242, "title": "How to convert a list into a string and then convert it back in python?"}
+{"qid": 7585307, "title": "Python hashlib problem &quot;TypeError: Unicode-objects must be encoded before hashing&quot;"}
+{"qid": 22503651, "title": "Can&#39;t start app with Python 2.7 and Django (probably something with encoding)"}
+{"qid": 5292273, "title": "hash unicode string in python"}
+{"qid": 22504233, "title": "Weird max min results for int column"}
+{"qid": 22504789, "title": "Count elements in a list python"}
+{"qid": 13399293, "title": "The preferred way to set matplotlib figure/axes properties"}
+{"qid": 16888736, "title": "pandas assigning series view to a series view doesn&#39;t work?"}
+{"qid": 22504845, "title": "Reduce number of Wrapper Objects in Dart"}
+{"qid": 16993928, "title": "Iterating function over dataframe columns with mixed function results"}
+{"qid": 22504930, "title": "Passing variables to django template from view"}
+{"qid": 16997048, "title": "How does one append large amounts of data to a Pandas HDFStore and get a natural unique index?"}
+{"qid": 17134942, "title": "pandas DataFrame output end of csv"}
+{"qid": 17152267, "title": "What is the fastest way to build a DataFrame piece by piece?"}
+{"qid": 17171521, "title": "python pandas DataFrame from a list"}
+{"qid": 17216114, "title": "iteratively read (tsv) file for Pandas DataFrame"}
+{"qid": 17836105, "title": "Finding rows in Pandas Data Frame with Same Values"}
+{"qid": 18262306, "title": "Quick sort with Python"}
+{"qid": 22475040, "title": "Python Web Crawling :How to get the last page of each category and expected output"}
+{"qid": 22504718, "title": "how to get the unicode format of &quot;\u4f60&quot;?"}
+{"qid": 22504857, "title": "Pass env var to flask via uwsgi"}
+{"qid": 22499503, "title": "Set Customize data rate for traffic burst"}
+{"qid": 9989334, "title": "Create nice column output in python"}
+{"qid": 22479095, "title": "Django calling REST API from models or views?"}
+{"qid": 22504731, "title": "parse xml in different encoding, using minidom"}
+{"qid": 7693535, "title": "What is a good XML stream parser for Python?"}
+{"qid": 22496657, "title": "How can I access each element of a pair in a pair list?"}
+{"qid": 14381091, "title": "How do I Assign a random number to a variable?"}
+{"qid": 22503238, "title": "Is Python more of a teaching/learning language than a working one?"}
+{"qid": 22487618, "title": "Posting to Facebook Group using the Graph API and Python"}
+{"qid": 22065164, "title": "Is there a way to remove duplicate and continuous words/phrases in a string?"}
+{"qid": 22502762, "title": "Better approach to do this"}
+{"qid": 22504259, "title": "Beginner/Intermediate Algorithms?"}
+{"qid": 22501211, "title": "unable to show a listbox having a fixed height in Tkinter"}
+{"qid": 22503998, "title": "REDIS in python"}
+{"qid": 22504011, "title": "JSON dynamic key referencing python"}
+{"qid": 22504123, "title": "Eclipse PyDev AutoCompletion for parameters"}
+{"qid": 73663, "title": "Terminating a Python script"}
+{"qid": 22503996, "title": "copy rows between pytables"}
+{"qid": 22467111, "title": "scrapy +couchebase: middleware or pipline? how to store and retrieve data"}
+{"qid": 5636458, "title": "Python library for job scheduling, ssh"}
+{"qid": 22503938, "title": "Color rotation in HSV using scikit-image"}
+{"qid": 22503766, "title": "python csv writer not handling escaping &#39;|&#39; correctly"}
+{"qid": 22503481, "title": "Inverted Python Dictionary JSON"}
+{"qid": 22503511, "title": "UnboundLocalError: local variable &#39;strength&#39; reference before assignment"}
+{"qid": 18641438, "title": "Installing Pip-3.2 on Cygwin"}
+{"qid": 22501006, "title": "Python: while loop inside else"}
+{"qid": 10523242, "title": "ELF Parsing : Accessing a DIE Directly using pyelftools"}
+{"qid": 1109422, "title": "Getting list of pixel values from PIL"}
+{"qid": 22502936, "title": "Python custom stdout filter"}
+{"qid": 22501155, "title": "php compare to python in perspective of core libraries"}
+{"qid": 20863045, "title": "Error when cross compiling Python for ARM"}
+{"qid": 22503204, "title": "How to send file over UDP in python - message too long"}
+{"qid": 22502671, "title": "How write print statement with end=&quot; &quot; immediately in python3?"}
+{"qid": 22501911, "title": "How does GCS know which project am I using?"}
+{"qid": 22501613, "title": "How can I use apply with pandas rolling_corr()"}
+{"qid": 22497282, "title": "Different processes in different screens in python"}
+{"qid": 22503073, "title": "Wrong context with python doctests in recursive function"}
+{"qid": 22502983, "title": "Python(3.2) Converting a file to a list"}
+{"qid": 10999990, "title": "Get raw POST body in Python Flask regardless of Content-Type header"}
+{"qid": 22500576, "title": "Tab not recognized as an internal or external command error?"}
+{"qid": 22216076, "title": "Python ::JSON encoding error"}
+{"qid": 22501923, "title": "What&#39;s a variable in a inner function definition in python?"}
+{"qid": 13942744, "title": "Prepare data for text classification using Scikit Learn SVM"}
+{"qid": 6431261, "title": "Efficient Shift Scheduling in Python"}
+{"qid": 22493664, "title": "Function of parameter"}
+{"qid": 22502370, "title": "Change Flask-Babel locale outside of request context for scheduled tasks"}
+{"qid": 22484688, "title": "python popen special characters not parsing file"}
+{"qid": 3253430, "title": "python 2.x or 3.x"}
+{"qid": 18727556, "title": "random is not defined"}
+{"qid": 22501431, "title": "How do I display function arguments in ipython qtconsole?"}
+{"qid": 22493394, "title": "Fastest Way to Populate a Pandas DataFrame When Order Matters"}
+{"qid": 22501251, "title": "client server socket programming not reponding"}
+{"qid": 8092920, "title": "sort eigenvalues and associated eigenvectors after using numpy.linalg.eig in python"}
+{"qid": 22491502, "title": "Placing ticks on specific values"}
+{"qid": 22472700, "title": "scikit learn imputing values other than NaN"}
+{"qid": 22501852, "title": "paramiko does not work when forced command is on"}
+{"qid": 22501760, "title": "What is maximum passible OpenBlas threads for using with numpy?"}
+{"qid": 16774400, "title": "Tornado memory leaks"}
+{"qid": 22501735, "title": "python script to extract logfile entries between two timestamps"}
+{"qid": 22501121, "title": "ConfigParser.MissingSectionHeaderError when parsing rsyncd config file with global options"}
+{"qid": 22501644, "title": "What is a django.utils.functional.__proxy__ object and what it helps with?"}
+{"qid": 21662109, "title": "How to find is a canvas item is touching another canvas item, Tkinter"}
+{"qid": 22500860, "title": "How to store words to a file by using : x for x in List A if x not in List B?"}
+{"qid": 1303243, "title": "How to find out if a Python object a string?"}
+{"qid": 14975018, "title": "Creating single EXE using py2exe for a Tkinter program"}
+{"qid": 22501127, "title": "can i indepent connect the wlst and use it&#39;s function on other script"}
+{"qid": 22501069, "title": "Future-safe version numbers in pip freeze output"}
+{"qid": 21743234, "title": "Pygame - &quot;Group object has no attribute &#39;rect&#39;&quot;"}
+{"qid": 12538160, "title": "Replacing specific words in a string (Python)"}
+{"qid": 21941541, "title": "How to make player image pause but game continues in pygame?"}
+{"qid": 21786307, "title": "Python - Pygame random obstacle height issues"}
+{"qid": 22499980, "title": "Pillow keeps throwing cannot identify image file on Window in Python2.7.6"}
+{"qid": 22500108, "title": "Label a Variable in pandas?"}
+{"qid": 22499218, "title": "MTPP and MTTPAdmin. Admin view"}
+{"qid": 22501003, "title": "Web socket encoding"}
+{"qid": 22501067, "title": "Refering to Labels Python, Tkinter"}
+{"qid": 22485399, "title": "Python dictionary comprehension gives KeyError"}
+{"qid": 22498506, "title": "traceroute multiple hos python. (reading .txt line by line)"}
+{"qid": 11488838, "title": "Multiple applications with django"}
+{"qid": 20390615, "title": "Why does this Google App Engine ndb ancestor query not work?"}
+{"qid": 21514439, "title": "How to create recurring, different rectangles in Pygame?"}
+{"qid": 22500995, "title": "Why is running numpy based on Openblas on Ipython notebook is too slow compared to terminal run?"}
+{"qid": 12944727, "title": "Python - imaplib - View message to specific sender"}
+{"qid": 22478508, "title": "DjangoRestFramework - Loading specific columns, and saving an entire object"}
+{"qid": 22500427, "title": "How can I convert plaintext password to django passwords when importing users?"}
+{"qid": 5137497, "title": "Find current directory and file&#39;s directory"}
+{"qid": 22472788, "title": "double plot in an embedded plot mainWindow"}
+{"qid": 22498337, "title": "Python appending elements of a list to a string"}
+{"qid": 22499786, "title": "Simple if-else statement in Python"}
+{"qid": 22486731, "title": "Insert into Oracle XMLType Table"}
+{"qid": 22494818, "title": "Fastest way to apply function on different lists in python"}
+{"qid": 22498877, "title": "Tracking changes in python source files?"}
+{"qid": 22500234, "title": "Redirect loop error in Pyramid webapp"}
+{"qid": 22483205, "title": "Python Django: Load Autofield to MySql Table using loaddata"}
+{"qid": 22498439, "title": "Post a picture using webrequest in c#"}
+{"qid": 22500189, "title": "Correct use of the .clear() method on QDateTimeEdit"}
+{"qid": 22500257, "title": "Angular is superslow when fetching data from local server"}
+{"qid": 22499818, "title": "Using netcat redirection in python to get data, after sending Ctrl C command"}
+{"qid": 53513, "title": "Best way to check if a list is empty"}
+{"qid": 22498426, "title": "Storing Key, Value in python"}
+{"qid": 22472151, "title": "DRF - restore_object() invoked twice"}
+{"qid": 13493477, "title": "UnicodeEncodeError: &#39;ascii&#39; codec can&#39;t encode characters"}
+{"qid": 22484560, "title": "Iterating through a directory - Nested directories- Unknown depth"}
+{"qid": 22488360, "title": "How to keep order after extracting a subset of a dictionary?"}
+{"qid": 6392739, "title": "What does the @ symbol do in Python"}
+{"qid": 17509088, "title": "System path error with PyQt and Py2exe"}
+{"qid": 22498563, "title": "change file from gbk into utf-8 and display it in console"}
+{"qid": 2494468, "title": "How to create an application which embeds and runs Python code without local Python installation?"}
+{"qid": 22499236, "title": "How to use redis commands for lists and sets in Django app"}
+{"qid": 22496112, "title": "Getting an error when importing mechanize branch for python3"}
+{"qid": 22499057, "title": "Python async webservice call"}
+{"qid": 22497985, "title": "Is it a bad idea to define a local class inside a function in python?"}
+{"qid": 22487818, "title": "SublimeText3 | API Injected completions"}
+{"qid": 22498948, "title": "how to do this search logic in django"}
+{"qid": 22497852, "title": "How to handle regex string in JSON file with Python"}
+{"qid": 22498297, "title": "read a file line by line and append word"}
+{"qid": 20186258, "title": "python clear textField &quot;Entry&quot;"}
+{"qid": 1707890, "title": "Fast way to filter illegal xml unicode chars in python?"}
+{"qid": 8688114, "title": "Python multi-inheritance, __init__"}
+{"qid": 11425802, "title": "How to check that the data is &#39;null&#39; in django view?"}
+{"qid": 22498237, "title": "while converting linked list to number value error raising"}
+{"qid": 22406309, "title": "How to get a file close event in python"}
+{"qid": 22497881, "title": "Getting PostgreSQL to work with Python/Django (lack of pg_config)?"}
+{"qid": 22498038, "title": "Improvement on interval python"}
+{"qid": 22498013, "title": "Handle Large number in Python"}
+{"qid": 22165003, "title": "Scrapy Multiple Spiders executing serially"}
+{"qid": 22497295, "title": "How to deal with PyCapsule type inside Python"}
+{"qid": 22494726, "title": "Compare list elements in python"}
+{"qid": 22498518, "title": "Authentication Process in Google Adword v201309?"}
+{"qid": 22497628, "title": "Django Unable to fetch single value of field from model"}
+{"qid": 22493506, "title": "exercise 9.3 in How To Think Like A Computer Scientist"}
+{"qid": 22475218, "title": "How to check the state of a robot button using python?"}
+{"qid": 22479860, "title": "Pyvirtualdisplay not working"}
+{"qid": 22494462, "title": "FFT in python cannot plot correct frequence"}
+{"qid": 22498286, "title": "Error installing ParsePy in CentOS"}
+{"qid": 22471252, "title": "Hierarchical Tags in Google App Engine ndb"}
+{"qid": 22497678, "title": "Quick parsing of large files in python"}
+{"qid": 22498125, "title": "How to import a third party module in Spyder"}
+{"qid": 22494609, "title": "Adding values corresponding to one key in python dictionary"}
+{"qid": 22496871, "title": "Selenium scrape with full xpath and Python"}
+{"qid": 22497906, "title": "Single process subscriber publisher in python using pika"}
+{"qid": 22497545, "title": "Removing style from specific tags BeautifulSoup/Python"}
+{"qid": 22497845, "title": "Starting Celery on openshift"}
+{"qid": 22495894, "title": "Should I deploy only the .pyc files on server if I worry about code security?"}
+{"qid": 22497752, "title": "Is there a way I can close an exe from python"}
+{"qid": 17614090, "title": "ReviewBoard installation on ubuntu 12.04"}
+{"qid": 22496870, "title": "Django Many-to-Many with a Model Inheritance"}
+{"qid": 22481014, "title": "Checking divisibility of numbers"}
+{"qid": 15754883, "title": "How to use pymongo to process huge collections"}
+{"qid": 22375673, "title": "How to send a request without &#39;Host Header&#39; using Python?"}
+{"qid": 22497532, "title": "Implement Python Scripting Into C++"}
+{"qid": 11667005, "title": "How do I programmatically generate a shapefile with python?"}
+{"qid": 11036319, "title": "Boost Python Hello World example not working in Python"}
+{"qid": 22444197, "title": "Renaming Multiple Files Based on Document Text String"}
+{"qid": 7696924, "title": "Multiline comments in Python"}
+{"qid": 22497301, "title": "how to extend the list in python without empty items"}
+{"qid": 22482157, "title": "PySNMP change output format"}
+{"qid": 22494041, "title": "Correcting errors in one file and writing it to a new file"}
+{"qid": 22496493, "title": "Error while installing scipy on windows"}
+{"qid": 22496764, "title": "Get external website&#39;s meta-description after returning success page in Django"}
+{"qid": 22496822, "title": "Removing span tags from soup BeautifulSoup/Python"}
+{"qid": 22495861, "title": "Plotting Serial data in Python how to pause matplotlib figure?"}
+{"qid": 22495416, "title": "django one template - many views - beginner"}
+{"qid": 5760622, "title": "PyQt4: Create a custom dialog that returns parameters"}
+{"qid": 22496097, "title": "Python how to handle unicode text"}
+{"qid": 22496596, "title": "How does one insert a key value pair into a python list?"}
+{"qid": 22496839, "title": "how to create a log file which stores all user actions in a app developed using wxpython?"}
+{"qid": 22461728, "title": "Convert from SRS coordinates to Latitude and Longitude in Python"}
+{"qid": 22496655, "title": "Download a file providing username and password using Python"}
+{"qid": 22496509, "title": "Merging with various lists"}
+{"qid": 22496752, "title": "Django error: UnboundLocalError in view"}
+{"qid": 16780014, "title": "python - import file from parent directory"}
+{"qid": 22496580, "title": "Python list append multiple elements"}
+{"qid": 22364996, "title": "Reading text file line by line and entering it into another application"}
+{"qid": 22496401, "title": "Iterating through a DOM with BeautifulSoup/Python"}
+{"qid": 22486108, "title": "Draw error dialog icon myself in PyQt / PySide"}
+{"qid": 22390096, "title": "Arrow keys not working with Enthought python"}
+{"qid": 22496354, "title": "os.system call not working?"}
+{"qid": 22495162, "title": "Speed up inserting large datasets from txt file to mySQL using python"}
+{"qid": 19425857, "title": "env: python\\r: No such file or directory"}
+{"qid": 9513072, "title": "More than one static path in local Flask instance"}
+{"qid": 13913165, "title": "Python script to convert from numbers to words for printing cheques"}
+{"qid": 22496178, "title": "How to calculate the inner distance of an array"}
+{"qid": 22472669, "title": "Unicode_escape_decode() takes no arguments error when run python in F#"}
+{"qid": 2048041, "title": "How to plot a graph in Python?"}
+{"qid": 22495835, "title": "Why are Python&#39;s generators not types?"}
+{"qid": 22496001, "title": "if statement with two conditions in Python"}
+{"qid": 22496015, "title": "Django forms: integrating a submit button as part of your form"}
+{"qid": 22495747, "title": "How to type random string in Python"}
+{"qid": 16852911, "title": "How do I convert dates in a Pandas data frame to a &#39;date&#39; data type?"}
+{"qid": 22495945, "title": "getting 500 undefined index page for python program"}
+{"qid": 2398485, "title": "cross-platform iTunes visualizer?"}
+{"qid": 22495912, "title": "error message displaying, giving problems with user login Django 1.6"}
+{"qid": 22495723, "title": "Python 3, sys.path doesn&#39;t work, how to permenantly append a path?"}
+{"qid": 22352282, "title": "Stringifying an Inline::Python::Object-encoded Unicode string"}
+{"qid": 22466910, "title": "How do i create a login page that can for a home website?"}
+{"qid": 22495194, "title": "How to return a decimal after using int() function on a string?"}
+{"qid": 22480514, "title": "Fastest way to grep multiple values from file in python"}
+{"qid": 19689652, "title": "Unable to find VCVarsall.bat using Python 2.7"}
+{"qid": 22485084, "title": "Django mptt tutorial error"}
+{"qid": 22440384, "title": "python - pythonic way to check assignment and exit if None"}
+{"qid": 22491488, "title": "How to create a fade out effect in Tkinter? My code crashes"}
+{"qid": 4545661, "title": "UnicodeDecodeError when redirecting to file"}
+{"qid": 19233132, "title": "How to tell uWSGI to prefer processes to threads for load balancing"}
+{"qid": 22495215, "title": "regarding re-factoring python code"}
+{"qid": 22495401, "title": "python delete variable within variable"}
+{"qid": 22495318, "title": "Can Python Print Text in Any Language Than English?"}
+{"qid": 22495373, "title": "how to set secret or private options in argparse"}
+{"qid": 22294241, "title": "Plotting a decision boundary separating 2 classes using Matplotlib&#39;s pyplot"}
+{"qid": 22495487, "title": "python script to popup message in windows doesn&#39;t work with Schedule tasks"}
+{"qid": 22495460, "title": "standardized header library for financial time series data in Pandas"}
+{"qid": 22473820, "title": "&quot;from __future__ import unicode_literals&quot; gives segfault in python 2.7"}
+{"qid": 22490272, "title": "Why does Angular produce a failure in GAE?"}
+{"qid": 22495181, "title": "Python Parent Class Instance Variables"}
+{"qid": 741877, "title": "How do I tell matplotlib that I am done with a plot?"}
+{"qid": 16591538, "title": "Python Library Can Detect Graphic Card"}
+{"qid": 22489367, "title": "Python - Variable in filename"}
+{"qid": 2546207, "title": "Does SQLAlchemy have an equivalent of Django&#39;s get_or_create?"}
+{"qid": 10240018, "title": "HOW TO use Pycharm to debug python script?"}
+{"qid": 22490833, "title": "python regular expression get all the text after a string"}
+{"qid": 3136915, "title": "Passing all arguments of a function to another function"}
+{"qid": 22471329, "title": "Doing tasks in a random order"}
+{"qid": 22452955, "title": "Self Organizing Maps Python- Code Error"}
+{"qid": 22493724, "title": "python lxml using iterparse to edit and output xml"}
+{"qid": 22469540, "title": "project euler #36 - cannot understand what is wrong with the algo"}
+{"qid": 22490630, "title": "Invalid Literal for int() with base 10: &quot;"}
+{"qid": 22494261, "title": "python async socket client"}
+{"qid": 22466696, "title": "Celery beat schedule multiple tasks under same time-interval group"}
+{"qid": 22494502, "title": "python code not executing input requests or running"}
+{"qid": 22493681, "title": "Python Button Transparency Tkinter"}
+{"qid": 22494794, "title": "Does requests.codes.ok include a 304?"}
+{"qid": 22313407, "title": "clang error: unknown argument: &#39;-mno-fused-madd&#39; (python package installation failure)"}
+{"qid": 22379067, "title": "auto run python result in &quot;EOF when reading a line &quot;"}
+{"qid": 12125138, "title": "Python NameError Name Not Defined"}
+{"qid": 22676, "title": "How do I download a file over HTTP using Python?"}
+{"qid": 5306582, "title": "Python NameError: name &#39;Print&#39; is not defined"}
+{"qid": 22480485, "title": "image matching in opencv python"}
+{"qid": 22494621, "title": "Backend for embedded matplotlib in cocoa"}
+{"qid": 19349365, "title": "Image manipulation in R"}
+{"qid": 22494582, "title": "Apache error on RHEL"}
+{"qid": 17192158, "title": "NameError: global name &#39;xrange&#39; is not defined"}
+{"qid": 22488637, "title": "Getting spline equation from UnivariateSpline object"}
+{"qid": 22494557, "title": "Compiled with cx_Freeze, now .exe throws ImportError: No module named BeautifulSoup"}
+{"qid": 22482721, "title": "Is there software for interactive working with text and columnar data?"}
+{"qid": 22493637, "title": "Python: Follow up regarding variable scope. Why can I change the global value of x.a within def A?"}
+{"qid": 22493827, "title": "Calling a .cmd file to execute Python script prints unnecessary errors"}
+{"qid": 22492034, "title": "Foreign Key Possibility of Two Models"}
+{"qid": 22494450, "title": "Change Python Output Format"}
+{"qid": 22483218, "title": "Making Probability Distribution Functions (PDFs) from histograms"}
+{"qid": 22489018, "title": "PyQt: How to get most of QListWidget"}
+{"qid": 22493838, "title": "how to pull value from queryset by going to database once django"}
+{"qid": 22494254, "title": "Python date.today shows the next day"}
+{"qid": 22487964, "title": "setting locale in Python for logging"}
+{"qid": 22346017, "title": "ImportError: Could not import settings on AWS Elastic Beanstalk"}
+{"qid": 22494077, "title": "how to use eval() in python mako templating"}
+{"qid": 22306390, "title": "sys.argv not working on sytems with previous .py associations"}
+{"qid": 22494116, "title": "Using NLTK to capture proper nouns with lower case prepositions"}
+{"qid": 22493595, "title": "Python doesn&#39;t create a new file"}
+{"qid": 22479581, "title": "Cannot use &#39;pyside-rcc&#39; to compile .qrc file"}
+{"qid": 22492913, "title": "How to determine if a string is between two characters w/o Regex?"}
+{"qid": 22493968, "title": "Cooperation for cross-server celery workers"}
+{"qid": 22490721, "title": "How can I get the x and y dimensions of a ndarray - Numpy / Python"}
+{"qid": 22493604, "title": "Tab seperated data python"}
+{"qid": 22491921, "title": "How to use a Python list to assign a std::vector in C++ using SWIG?"}
+{"qid": 22493765, "title": "Java do nothing"}
+{"qid": 22490237, "title": "Python Bottle Framework Loading Old Code (Despite Cache Clearing)"}
+{"qid": 2213551, "title": "Installing scipy with pip"}
+{"qid": 22493647, "title": "What am I doing wrong? and/or in Python"}
+{"qid": 22493529, "title": "No module named &#39;forms&#39; Django"}
+{"qid": 22396013, "title": "Programmatic retweeting with Python&#39;s twitter library"}
+{"qid": 20169728, "title": "Exe created with py2exe doesn&#39;t work and returns logfile with errors"}
+{"qid": 22493605, "title": "python programming help (calculate percentage)"}
+{"qid": 22493228, "title": "Inheritance : Base class method which returns an instance of itself"}
+{"qid": 20425174, "title": "Get specific datasets from socrata"}
+{"qid": 22492222, "title": "regex approach to capture both 1-word and 2-word Proper Nouns"}
+{"qid": 22493472, "title": "Which version of the Microsoft Access ODBC Driver should I install?"}
+{"qid": 2986547, "title": "Python C API from C++ app - know when to lock"}
+{"qid": 22361438, "title": "LDA for Html Documents in Genism"}
+{"qid": 268629, "title": "How to stop BaseHTTPServer.serve_forever() in a BaseHTTPRequestHandler subclass?"}
+{"qid": 22493204, "title": "Will one class method that creates a loop stop another in python?"}
+{"qid": 22492108, "title": "Simple explanation/example for generating a random number on an exponential distribution"}
+{"qid": 22493063, "title": "python - How to use StringIO with imghdr to determine if valid image"}
+{"qid": 22493044, "title": "Stop loop creating un-wanted code?"}
+{"qid": 22491107, "title": "How to set each input parameter of a function to None and verify that an error is returned?"}
+{"qid": 22492835, "title": "Python: Regarding variable scope. Why don&#39;t I need to pass x to Y?"}
+{"qid": 22493029, "title": "How to get data from a web page using python?"}
+{"qid": 22493000, "title": "Python parsing set-cookie header"}
+{"qid": 22451973, "title": "Calculating Excel sheets without opening them (openpyxl or xlwt)"}
+{"qid": 22492967, "title": "how to get spyder&#39;s python recognize external packages on MacOS X?"}
+{"qid": 22492357, "title": "Replace parts of string that occur within a list"}
+{"qid": 4719438, "title": "Editing specific line in text file in python"}
+{"qid": 22486142, "title": "I want to return the &#39;a&#39; of the URL instead of the whole URL"}
+{"qid": 22492479, "title": "sorting a list of strings by their length not working"}
+{"qid": 2044941, "title": "Pythonize Me: how to manage caller context variables in Python? (Python/Django)"}
+{"qid": 22491367, "title": "Python: re.sub changes nothing"}
+{"qid": 22492118, "title": "Payroll program for Python using multiple functions and return function"}
+{"qid": 22002002, "title": "Advice On Making A Hangman Game In Python?"}
+{"qid": 22492548, "title": "City specific Google Trends results? Google Trends API pyGTrends malfunction"}
+{"qid": 22491467, "title": "Python modules importing each other"}
+{"qid": 22492432, "title": "Python+django - some problems with using css javascript and images"}
+{"qid": 22492303, "title": "Why does Python use the same object for property X in all instances of a class when the default for property X is an empty dict?"}
+{"qid": 22491586, "title": "Python abstract module possible?"}
+{"qid": 22492042, "title": "Pandas Histogram of Filtered Dataframe"}
+{"qid": 22492370, "title": "Python Output Text to PDF"}
+{"qid": 22492270, "title": "Printing values in multiple arrays coming out a jarbled mess"}
+{"qid": 21807108, "title": "Conditional merge in pandas"}
+{"qid": 22489425, "title": "Merge QgsMessageBar with ui file ?"}
+{"qid": 22471996, "title": "Accessing using uploaded Sqlite db&#39;s using Django ORM"}
+{"qid": 22492220, "title": "Python: Extract Splitting Pathways"}
+{"qid": 22491268, "title": "validating email in registration is not raising validationError in Django?"}
+{"qid": 22492158, "title": "Pyinstaller on Debian Powerpc version will not produce executable files"}
+{"qid": 22312016, "title": "Remote tcp connection in python with zeromq"}
+{"qid": 22492152, "title": "Error: (&#39;IM002&#39;, &#39;[IM002] [Microsoft][ODBC Driver Manager] Data source name not found and no default driver specified (0) (SQLDriverConnectW)&#39;)"}
+{"qid": 22491543, "title": "Repeating questions to user ten times in Python"}
+{"qid": 22491503, "title": "Modify keys in ndarray"}
+{"qid": 9023488, "title": "Build error with variables and url_for in Flask"}
+{"qid": 22454729, "title": "Program freezes during BufferedWriter operations - not reproducible"}
+{"qid": 22491843, "title": "writing only the one string of all splitted lines to a file"}
+{"qid": 22492048, "title": "use CountJump plugin to jump blocks with same indentation VIM"}
+{"qid": 22491997, "title": "What is the use of the third type in the ModelAdmin.list_filter documentation? [django]"}
+{"qid": 22480472, "title": "Install blist in mac os x Mavericks"}
+{"qid": 22487234, "title": "Making a GUI in C++/Python"}
+{"qid": 22491230, "title": "Scraping a webpage for state name"}
+{"qid": 1657570, "title": "Google Search from a Python App"}
+{"qid": 22491628, "title": "Extrapolate values in Pandas DataFrame"}
+{"qid": 22491749, "title": "Python and matrix of objects"}
+{"qid": 22458078, "title": "How can i access gtk.Entry() in my GUI script from my other script? Python"}
+{"qid": 70797, "title": "Python: user input and commandline arguments"}
+{"qid": 22490391, "title": "Hexcode generator in python"}
+{"qid": 22491622, "title": "Access an element inside a list, given by a variable Python"}
+{"qid": 22491263, "title": "Python recursion - boolean"}
+{"qid": 22491687, "title": "Django: Redirect to object generates weird URL"}
+{"qid": 22491510, "title": "Difference between jinja2 functions and filters?"}
+{"qid": 22489617, "title": "Correct way of getting time delta value from config file"}
+{"qid": 22491476, "title": "When reading from line returns newline - Python"}
+{"qid": 22491089, "title": "Python Loops--Generating Loop Values for a Loop"}
+{"qid": 22487666, "title": "Problems to control touch keypad using RaspberryPi / Python"}
+{"qid": 22490868, "title": "Regex to match complete, arbitrary-length, typeful LDAP name"}
+{"qid": 22491363, "title": "Python LookupError: unknown encoding: cp20936"}
+{"qid": 22468314, "title": "Launching osascript from python and launchd"}
+{"qid": 22491323, "title": "Python: Insert Footnote-node in XML"}
+{"qid": 22490567, "title": "Closing steps in matplotlib"}
+{"qid": 22488553, "title": "How to use Z3py and Sympy together"}
+{"qid": 22491298, "title": "ValueError: unconverted data remains on Pandas DataFrame"}
+{"qid": 22490373, "title": "Manipulate data using numpy loadtxt"}
+{"qid": 22487780, "title": "What do I use instead of PyString_AsString when loading a python module in 3.3"}
+{"qid": 22490705, "title": "Python decorator class with function counter variable"}
+{"qid": 22487231, "title": "How to start a batch file from within a python script and detach from it"}
+{"qid": 20524462, "title": "Using TelnetLib with a Cisco Wireless Controller"}
+{"qid": 22490399, "title": "Django forms and initial values"}
+{"qid": 22485971, "title": "Python SqlAlchemy insert ARRAY (postgres) with NULL values not possible?"}
+{"qid": 20301855, "title": "Saving config of a Python plasmoid"}
+{"qid": 22491132, "title": "line 808, in __bootstrap_inner error win32com Python"}
+{"qid": 22186544, "title": "PyQt: How to Generate a Raster Image with a Custom Message"}
+{"qid": 22490781, "title": "Concatenating Waveforms and Matching Amplitude and Phase"}
+{"qid": 22490777, "title": "SQLAlchemy: How to order query results (order_by) on a relationship&#39;s field? [revisited]"}
+{"qid": 22489084, "title": "Python code works, but eclipse shows error - Syntax error while detecting tuple"}
+{"qid": 22490563, "title": "Adjusting file name if file name already exists"}
+{"qid": 22490926, "title": "turning translucent graphics to Opaque Graphic using graphics.py"}
+{"qid": 22489918, "title": "need to count number of occurrences of given strings in an if statement"}
+{"qid": 22489515, "title": "splinter: element not found inside iframe"}
+{"qid": 22484122, "title": "How to use each row of file with loadtxt?"}
+{"qid": 22403703, "title": "How do I automatically increment value for definition of constant list of indices in Python?"}
+{"qid": 22487304, "title": "How Can I Print Running Text? For Example to Print &quot;Stack&quot; Python Will Print S then t then a then c and then k?"}
+{"qid": 22490379, "title": "How to Return an array of objects in a Django model"}
+{"qid": 22490568, "title": "Converting a very small python Decimal into a non-scientific notation string"}
+{"qid": 22490120, "title": "How to read a flat formatted text file where the contents are in chunks and separated by special chars"}
+{"qid": 22490478, "title": "&#39;float&#39; object is not subscriptable"}
+{"qid": 22490366, "title": "cmp() isnt woking for me (python)"}
+{"qid": 22484596, "title": "How to know if a number is in another number python"}
+{"qid": 17074948, "title": "Windows Live: mail access using RESTful API?"}
+{"qid": 22490200, "title": "python-argparse: assign a choice to each argument"}
+{"qid": 22490514, "title": "Python Backpropagation: No output value"}
+{"qid": 22490452, "title": "How to upload files to an HTTP location using a python script"}
+{"qid": 22490475, "title": "Pip install with newer dependency"}
+{"qid": 22490285, "title": "using a for loop within a .apply() for pandas dataframes"}
+{"qid": 22490233, "title": "win32com import error python 3.4"}
+{"qid": 19801968, "title": "PyCharm, Python3.4"}
+{"qid": 22486169, "title": "Python Datetime error"}
+{"qid": 22490157, "title": "How to check if an entry already exists inside a table (SQL using Python)"}
+{"qid": 22490138, "title": "User installed python modules"}
+{"qid": 22489715, "title": "Testing web-tornado using Firefox&#39;s HttpRequest addon"}
+{"qid": 21498875, "title": "When using multiple classifiers - How to measure the ensemble&#39;s performance? [SciKit Learn]"}
+{"qid": 22489602, "title": "How do I check if a string exists in a list"}
+{"qid": 11385240, "title": "Python: I use .decode() - &#39;ascii&#39; codec can&#39;t encode"}
