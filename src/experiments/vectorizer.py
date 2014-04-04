@@ -2,7 +2,7 @@ import math
 from cache import Cache
 
 class Vectorizer(object):
-    cache = Cache(10000) # this cache (behaves just like a queue/dictionary) should be referenced as static
+    cache = Cache(10000) # this cache (behaves just like a queue/dictionary) should be referenced static
     
     def __init__(self, name):
         self.name = name
@@ -11,13 +11,13 @@ class Vectorizer(object):
         return self.name
     
     def getVector(self, document):
-        if (document.getName(),self.getName()) in self.cache:
-            return Vectorizer.cache[(document.getName(),self.getName())]
+        if (str(document.getName())+'&'+self.getName()) in self.cache:
+            return Vectorizer.cache[(str(document.getName())+'&'+self.getName())]
         
         vector = self.calculateVector(document)
         
         #save to cache
-        Vectorizer.cache[(document.getName(),self.getName())] = vector
+        Vectorizer.cache[(str(document.getName())+'&'+self.getName())] = vector
         return vector
         
     ''' this is the function that will be overwritten by all subclasses '''   
