@@ -9,6 +9,7 @@ from operator import itemgetter
 from vectorizer import Vectorizer
 import json
 import sys
+import math
 
 
 class ExperimentEngine():
@@ -17,9 +18,10 @@ class ExperimentEngine():
     
     
 
-    def __init__(self, index, vectorizers):
+    def __init__(self, index, linkedDocs, vectorizers):
         # send tweets into index
         self.index = index
+        self.linkedDocs = linkedDocs
         self.vectorizers = vectorizers
         
         # get documents from index
@@ -44,10 +46,23 @@ class ExperimentEngine():
             stats[name] = {}
             results[name] = {}
         
-        for doc in self.documents:
+        for doc in set(self.linkedDocs).intersection(set(self.documents)): #we only need to calculate pairs for docs we know links for
+            if doc not in self.documents:
+                print 'doc not in documents', doc
+                continue
+            oneIn = False
+            for i in self.linkedDocs[doc]:
+                if i in self.documents:
+                    oneIn = True
+                    
+            if not oneIn:
+                continue
+            
             doc = self.documents[doc]
             print 'calculating results for',doc.getName()
             
+            for name in self.vectorizers:
+                results[name] = {}            
             
             for doc2 in self.documents:
                 doc2 = self.documents[doc2]
@@ -60,15 +75,17 @@ class ExperimentEngine():
                         vectorizer = self.vectorizers[vname]
                         v1 = vectorizer.getVector(doc)
                         v2 = vectorizer.getVector(doc2)
-                        results[vname][str(doc2.getName())+'&'+str(doc.getName())] = self.cosineScore(v1,v2)
+                        results[vname][str(doc.getName())+'&'+str(doc2.getName())] = self.cosineScore(v1,v2)
+            for vname in self.vectorizers:
+                ndcg = self.NDCG(results[name])
+                if ndcg != None:
+                    stats[name]['NDCG'] = stats[name].get('NDCG',[]) + [ndcg]
         
         ''' accumulate stats '''
         for vname in results:
             accum = 'sum of scores'
-            stats[vname][accum] = 0
-            stats[vname]['total # of scores'] = len(results[vname])
-            for result in results[vname]:
-                stats[vname][accum] += results[vname][result]
+            stats[vname]['maxNDCG'] = max(stats[vname]['NDCG'])
+            stats[vname]['NDCG'] = sum(stats[vname]['NDCG'])/len(stats[vname]['NDCG'])
             
         
         print stats        
@@ -76,7 +93,40 @@ class ExperimentEngine():
         return stats
         
     
-            
+    def NDCG(self, results):
+        def reverse_numeric(x, y):
+            if y - x > 0:
+                return 1
+            if y-x < 0:
+                return -1
+            else:
+                return 0
+        
+        results = sorted(results.items(), key=itemgetter(1), cmp=reverse_numeric)
+        
+
+        rank = 0
+        dcg = 0
+        numRelevant = 0
+        
+        for i in results:
+            rank += 1
+            docs = i[0].split('&')
+            d1 = int(docs[0])
+            d2 = int(docs[1])
+            if d2 in self.linkedDocs[d1]:
+                numRelevant += 1
+                dcg += 1 / math.log(1+rank) #normally dcg is 2**rel -1 /... but since our rel values are 1...
+        if numRelevant > 0:       
+            return dcg / self.IDCG(numRelevant)
+
+        return None
+    
+    def IDCG(self, numRelevantDocs):
+        idcg = 0
+        for i in range(1,numRelevantDocs+1):
+            idcg += 1/math.log(1+i)
+        return idcg
             
     def cosineScore(self, vector1, vector2):
         # calculate dot product

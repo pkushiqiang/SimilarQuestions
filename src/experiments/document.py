@@ -20,15 +20,15 @@ class Document:
     cluster = None
     docID = -1
     # send in either path or text, but not both.
-    def __init__(self, path = None, text = None, docID = -1):
-        self.postingsList = {}
-        if text != None:
-            self.processString(text)
+    def __init__(self, path = None, body = None, title = None, docID = -1):
+        self.postingsListTitle = {}
+        self.postingsListBody = {}
+        if title != None and body != None:
+            self.processTitleString(title)
+            self.processBodyString(body)
             self.name = ""
             self.path = ""
-        self.name = docID
-        self.calculateMagnitude()
-        
+        self.name = docID        
         
     def read(self):
         f = open(self.path)
@@ -36,12 +36,18 @@ class Document:
         for line in lines:
             self.processString(line)
         
-    def processString(self, text):
+    def processTitleString(self, text):
         tokens = self._tokenizeLine(text)
         for token in tokens:
-            self._addToPostingsList(token)
+            self._addToPostingsListTitle(token)
             #print token
-        
+    
+    def processBodyString(self, text):
+        tokens = self._tokenizeLine(text)
+        for token in tokens:
+            self._addToPostingsListBody(token)
+            #print token
+    
             
     def _tokenizeLine(self, line):
         line = line.strip()
@@ -68,46 +74,41 @@ class Document:
         
         return line
     
-    def _addToPostingsList(self, term):
-        if term not in self.postingsList:
-            self.postingsList[term] = Posting(term, self)
-        self.postingsList[term].incrementOccurrences()
+    def _addToPostingsListTitle(self, term):
+        if term not in self.postingsListTitle:
+            self.postingsListTitle[term] = Posting(term, self)
+        self.postingsListTitle[term].incrementOccurrences()
+        
+    def _addToPostingsListBody(self, term):
+        if term not in self.postingsListBody:
+            self.postingsListBody[term] = Posting(term, self)
+        self.postingsListBody[term].incrementOccurrences()    
     
-    def printPostingsList(self):
+    def printPostingsListTitle(self):
         print 'Magnitude: ', self.magnitude
-        for term in self.postingsList:
-            print self.postingsList[term].getOccurrences(), " : ", term
+        for term in self.postingsListTitle:
+            print self.postingsListTitle[term].getOccurrences(), " : ", term
             
     def getName(self):
         return self.name
     
     def getPostingsList(self):
-        return self.postingsList
+        combined = {}
+        for term in set(self.postingsListTitle.keys()+self.postingsListBody.keys()):
+            if term in self.postingsListTitle and term in self.postingsListBody:
+                occurrences = self.postingsListTitle[term].getOccurrences() + self.postingsListBody[term].getOccurrences()
+                combined[term] = Posting(term,self,occurrences)
+            elif term in self.postingsListTitle:
+                combined[term] = self.postingsListTitle[term]
+            elif term in self.postingsListBody:
+                combined[term] = self.postingsListBody[term]
+        return combined
     
-    def getMagnitudeOfVector(self):
-        if self.magnitude:
-            return self.magnitude
-        else:
-            return self.calculateMagnitude()
-    
-    
-    def calculateMagnitude(self):
-        mag = 0.
-        for i in self.postingsList:
-            mag += self.postingsList[i].getOccurrences()**2
-        mag = math.sqrt(mag)
-        self.magnitude = mag
-        return self.magnitude
+    def getPostingsListTitle(self):
+        return self.postingsListTitle
+
+    def getPostingsListBody(self):
+        return self.postingsListBody
+            
         
             
-if __name__ == '__main__':
-    print "I'm running document.py"  
-    print '\n\n'
-    doc = Document('/Users/valentine/Dropbox/Classes/InfoStorageRetrieval/HW1/simpleFiles/testFile.txt')
-    print doc.name
-    doc.printPostingsList()
-    
-    print 
-    print
-    doc2 = Document(text='howdy i am stephanie. i pretty much rock. no big deal.')
-    doc2.printPostingsList()

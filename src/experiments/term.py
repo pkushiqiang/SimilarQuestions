@@ -26,8 +26,8 @@ class Term:
         self.postingsList += [posting]
         return True 
     
-    def setIDF(self, idf):
+    def setIDF(self, idf): #this is actually df
         self.idf = idf
         
-    def getIDF(self):
+    def getIDF(self): #this is actually df
         return self.idf
