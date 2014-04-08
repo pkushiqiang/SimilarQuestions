@@ -33,7 +33,8 @@ class QuestionGetter:
           'tagged' : tagged,
           'site' : 'stackoverflow',
           'order':'desc',
-          'sort' : 'activity'}
+          'sort' : 'activity',
+          'filter': '!)re8-BBbvkEcM)sDXs2P' }
           
     def getPage(self, pageNo):
         params = self.base_params.copy()
@@ -86,10 +87,10 @@ class QuestionGetter:
         
 def main():
     pageSize = 100
-    startPageNo = 2680
+    startPageNo = 1
     endPageNo = 10000
     dbClient = DbClient('localhost', 27017, "SimilarQuestion")
-    collection = dbClient.getCollection("question_test")
+    collection = dbClient.getCollection("python_questions")
     
     questionGetter = QuestionGetter(pageSize,"python")
     for  pg in range(startPageNo, endPageNo):
