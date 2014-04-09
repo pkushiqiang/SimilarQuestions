@@ -77,11 +77,12 @@ class ExperimentEngine():
                         v2 = vectorizer.getVector(doc2)
                         results[vname][str(doc.getName())+'&'+str(doc2.getName())] = self.cosineScore(v1,v2)
             for vname in self.vectorizers:
-                ndcg = self.NDCG(results[name])
+                ndcg = self.NDCG(results[vname])
                 if ndcg != None:
-                    stats[name]['NDCG'] = stats[name].get('NDCG',[]) + [ndcg]
+                    stats[vname]['NDCG'] = stats[vname].get('NDCG',[]) + [ndcg]
         
         ''' accumulate stats '''
+        print stats
         for vname in results:
             accum = 'sum of scores'
             stats[vname]['maxNDCG'] = max(stats[vname]['NDCG'])

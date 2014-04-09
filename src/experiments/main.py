@@ -14,9 +14,12 @@ def main():
     
     vectorizers = {}
     tfidf = Vectorizer_TFIDF()
-    
     vectorizers[tfidf.getName()] = tfidf
-    
+    tfidf = Vectorizer_TFIDF('title')
+    vectorizers[tfidf.getName()] = tfidf
+    tfidf = Vectorizer_TFIDF('body')
+    vectorizers[tfidf.getName()] = tfidf
+        
     linkedFile = open('../../data/python_linked.txt')
     linkedDocs = {}
     for q in linkedFile:
