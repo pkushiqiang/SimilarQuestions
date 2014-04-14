@@ -15,7 +15,7 @@ def main():
     index = Index(questions)
     
     vectorizers = {}
-    # if we want to call only some of them...
+    # if we want to call only some of them (from commandline)...
     if len(sys.argv) > 1:
         if 'tfidf' in sys.argv:
             tfidf = Vectorizer_TFIDF()  
@@ -34,8 +34,6 @@ def main():
         tfidf = Vectorizer_TFIDF('body')
         vectorizers[tfidf.getName()] = tfidf
         
-    print vectorizers
-    exit(0)
         
     linkedFile = open('../../data/python_linked.txt')
     linkedDocs = {}
