@@ -25,8 +25,8 @@ class Index:
         #questions is formatted as a list of dictionaries with attributes 'docID', 'text' and 'cluster'
         for d in range(len(questions)):
             #print questions[d]
-            doc = Document(text=questions[d]['title'], docID = questions[d]['qid'])
-            self.documents[doc.getName] = doc
+            doc = Document(title=questions[d]['title'],body=questions[d]['body'], docID = questions[d]['qid'])
+            self.documents[doc.getName()] = doc
             #print 'loading', doc.getName(), '...'
             #doc.printPostingsList()
             pl = doc.getPostingsList()
