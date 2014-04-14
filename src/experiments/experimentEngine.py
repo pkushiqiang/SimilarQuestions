@@ -10,6 +10,7 @@ from vectorizer import Vectorizer
 import json
 import sys
 import math
+from time import time
 
 
 class ExperimentEngine():
@@ -44,6 +45,7 @@ class ExperimentEngine():
         
         for name in self.vectorizers:
             stats[name] = {}
+            stats[name]['time'] = self.currentMilliTime()
             results[name] = {}
         
         for doc in set(self.linkedDocs).intersection(set(self.documents)): #we only need to calculate pairs for docs we know links for
@@ -82,11 +84,12 @@ class ExperimentEngine():
                     stats[vname]['NDCG'] = stats[vname].get('NDCG',[]) + [ndcg]
         
         ''' accumulate stats '''
-        print stats
+        
         for vname in results:
             accum = 'sum of scores'
             stats[vname]['maxNDCG'] = max(stats[vname]['NDCG'])
             stats[vname]['NDCG'] = sum(stats[vname]['NDCG'])/len(stats[vname]['NDCG'])
+            stats[vname]['time'] = int(self.currentMilliTime() - stats[vname]['time'])
             
         
         print stats        
@@ -168,7 +171,8 @@ class ExperimentEngine():
                         
         return collections.OrderedDict(sorted(dictionary.items(), key=itemgetter(1)))
     
-
+    def currentMilliTime(self):
+        return int(round(time() * 1000))
 
 
 def main():
