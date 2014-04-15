@@ -102,18 +102,23 @@ class ExperimentEngine():
             stats[vname]['time'] = int(self.currentMilliTime() - stats[vname]['time'])
             ndcg = numpy.array(stats[vname]['NDCG'])
             stats[vname]['_NDCG_max'] = max(stats[vname]['NDCG'])
+            stats[vname]['_NDCG_min'] = min(stats[vname]['NDCG'])
             stats[vname]['_NDCG_mean'] = numpy.mean(ndcg)
             stats[vname]['_NDCG_median'] = numpy.median(ndcg)
-            stats[vname]['_NDCG_mode']= st.mode(ndcg)
+            stats[vname]['_NDCG_mode']= min(st.mode(ndcg)[0])
             stats[vname]['_NDCG_standardDeviation'] = numpy.std(ndcg, axis = 0)
             topRank = numpy.array(stats[vname]['topRank'])
             stats[vname]['_TopRank_max'] = max(stats[vname]['topRank'])
+            stats[vname]['_TopRank_min'] = min(stats[vname]['topRank'])
             stats[vname]['_TopRank_mean'] = numpy.mean(topRank)
             stats[vname]['_TopRank_median'] = numpy.median(topRank)
-            stats[vname]['_TopRank_mode']= st.mode(topRank)
+            stats[vname]['_TopRank_mode']= min(st.mode(topRank)[0])
             stats[vname]['_TopRank_standardDeviation'] = numpy.std(topRank, axis = 0)
             stats[vname]['_Percent@Rank1'] = float(stats[vname]['topRank'].count(1))/len(stats[vname]['topRank'])
 
+        print json.dumps(stats)
+        print '\n\n\n\n'
+        
         
         for i in stats:
             print i
