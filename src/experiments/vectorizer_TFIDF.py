@@ -27,5 +27,5 @@ class Vectorizer_TFIDF(Vectorizer):
             # this is the ONLY line in this function that is tfidf specific. Most likely, everything
             # else in this function should stay the same for all vectorizers
             vector[term] = postingsList[term].getTFIDF()
-            
+
         return vector

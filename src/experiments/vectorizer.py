@@ -10,7 +10,7 @@ class Vectorizer(object):
     def getName(self):
         return self.name
     
-    def getVector(self, document):
+    def getVector(self, synonym, num_syn, document):
         if (str(document.getName())+'&'+self.getName()) in self.cache:
             return Vectorizer.cache[(str(document.getName())+'&'+self.getName())]
         
@@ -22,7 +22,7 @@ class Vectorizer(object):
         
     ''' this is the function that will be overwritten by all subclasses '''   
     def calculateVector(self, document):
-        pass
+        pass    
     
     @staticmethod
     def getMagnitude(vector):
