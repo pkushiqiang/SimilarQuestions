@@ -16,10 +16,6 @@ def main():
     index = Index(questions)
     
     vectorizers = {}
-<<<<<<< HEAD
-    synonym = False
-=======
->>>>>>> FETCH_HEAD
     # if we want to call only some of them (from commandline)...
     if len(sys.argv) > 1:
         if 'tfidf' in sys.argv:
@@ -31,7 +27,7 @@ def main():
         if 'tfidf-body' in sys.argv:
             tfidf = Vectorizer_TFIDF('body')
             vectorizers[tfidf.getName()] = tfidf
-<<<<<<< HEAD
+
         if 'synonym' in sys.argv:
             if sys.argv[-1].isdigit():
                 num_syn = sys.argv[-1]
@@ -53,9 +49,7 @@ def main():
                 num_syn = 2 
             synonym = Vectorizer_Synonym(num_syn, 'body')  
             vectorizers[synonym.getName()] = synonym             
-            
-=======
->>>>>>> FETCH_HEAD
+
     else: # if we want to run all of them
         tfidf = Vectorizer_TFIDF()
         vectorizers[tfidf.getName()] = tfidf
@@ -63,10 +57,7 @@ def main():
         vectorizers[tfidf.getName()] = tfidf
         tfidf = Vectorizer_TFIDF('body')
         vectorizers[tfidf.getName()] = tfidf
-<<<<<<< HEAD
-=======
-        
->>>>>>> FETCH_HEAD
+
         
     linkedFile = open('../../data/python_linked.txt')
     linkedDocs = {}
