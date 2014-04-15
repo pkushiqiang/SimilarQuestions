@@ -10,7 +10,7 @@ class Vectorizer(object):
     def getName(self):
         return self.name
     
-    def getVector(self, synonym, num_syn, document):
+    def getVector(self, document):
         if (str(document.getName())+'&'+self.getName()) in self.cache:
             return Vectorizer.cache[(str(document.getName())+'&'+self.getName())]
         
