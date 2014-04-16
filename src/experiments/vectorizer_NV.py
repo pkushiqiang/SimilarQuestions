@@ -36,9 +36,16 @@ class Vectorizer_NV(Vectorizer):
                 vector[term] = postingsList[term].getTFIDF() * 1.2
             else:
                 vector[term] = postingsList[term].getTFIDF()           
-            testingVector[term] = postingsList[term].getTFIDF()           
+            testingVector[term] = postingsList[term].getTFIDF()     
+            
+            # Another version
+            #if tag[0][1] in NVlist:
+                #vector[term] = 1.2
+            #else:
+                #vector[term] = 1         
+             
         print vector
         print
-        print testingVector         
+        print testingVector
         exit(0)    
         return vector
