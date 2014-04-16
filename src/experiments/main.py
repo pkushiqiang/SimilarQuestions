@@ -48,7 +48,17 @@ def main():
             else:
                 num_syn = 2 
             synonym = Vectorizer_Synonym(num_syn, 'body')  
-            vectorizers[synonym.getName()] = synonym             
+            vectorizers[synonym.getName()] = synonym  
+        
+        if 'nounverb' in sys.argv:
+            nounverb = Vectorizer_NV()  
+            vectorizers[nounverb.getName()] = nounverb
+        if 'nounverb-title' in sys.argv:
+            nounverb = Vectorizer_NV('nounverb')
+            vectorizers[nounverb.getName()] = nounverb
+        if 'nounverb-body' in sys.argv:
+            nounverb = Vectorizer_NV('body')
+            vectorizers[nounverb.getName()] = nounverb        
 
     else: # if we want to run all of them
         tfidf = Vectorizer_TFIDF()
@@ -56,13 +66,6 @@ def main():
         tfidf = Vectorizer_TFIDF('title')
         vectorizers[tfidf.getName()] = tfidf
         tfidf = Vectorizer_TFIDF('body')
-<<<<<<< HEAD
-        vectorizers[tfidf.getName()] = tfidf
-
-=======
-        #vectorizers[tfidf.getName()] = tfidf
-        
->>>>>>> FETCH_HEAD
         
     linkedFile = open('../../data/full_python_linked.txt')
     f = linkedFile.read()
