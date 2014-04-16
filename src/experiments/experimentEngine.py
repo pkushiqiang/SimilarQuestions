@@ -33,7 +33,7 @@ class ExperimentEngine():
         #print self.documents
         
         
-    def getVector(self, vectorizer, documentID = False, document=False):
+    def getVector(self, vectorizer, documentID=False, document=False):
         if documentID:
             return vectorizer.getVector(self.documents[documentID])
         elif document:
@@ -50,9 +50,14 @@ class ExperimentEngine():
             stats[name] = {}
             stats[name]['time'] = self.currentMilliTime()
             results[name] = {}
+<<<<<<< HEAD
+
+            
+=======
         
         numDocs = 0
         
+>>>>>>> FETCH_HEAD
         for doc in set(self.linkedDocs).intersection(set(self.documents)): #we only need to calculate pairs for docs we know links for
             numDocs += 1
             
