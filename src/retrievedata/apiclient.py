@@ -41,12 +41,11 @@ class ApiClient:
         self.url_pre = 'http://api.stackexchange.com/2.2/questions/?%s'
         self.base_params = {'key' : 'EbLWZXUAdGFwspI2B3pnzQ((',
           'page' : '1',
-          'pagesize' : str(pageSize),         
+          'pagesize' : str(pageSize),
+          'tagged' : tagged,
           'site' : 'stackoverflow',
           'order':'desc',
           'sort' : 'activity'}
-        if tagged is not None: 
-              self.base_params['tagged'] = tagged 
           
     def getPage(self, pageNo):
         params = self.base_params.copy()

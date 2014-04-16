@@ -22,7 +22,7 @@ class Vectorizer(object):
         
     ''' this is the function that will be overwritten by all subclasses '''   
     def calculateVector(self, document):
-        pass
+        pass    
     
     @staticmethod
     def getMagnitude(vector):

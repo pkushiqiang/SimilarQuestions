@@ -1,2 +1,0 @@
-db.english_link.find(  
-                 { "$where" : "this.items.length > 1" }  )
