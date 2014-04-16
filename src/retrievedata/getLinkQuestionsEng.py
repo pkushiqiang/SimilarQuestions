@@ -78,7 +78,7 @@ class LinkedQuestionGetter(ApiClient):
             json_data['_id'] = qid
             json_data['title'] = item["title"]
          #   print len(json_data["items"])
-            if len(json_data["items"]) > 0 :
+            if json_data.has_key("items") and len(json_data["items"]) > 0 :
                 print len(json_data["items"])
                 try:
                     self.collection.insert(json_data)
@@ -101,7 +101,7 @@ class RelatedQuestionGetter(LinkedQuestionGetter):
         
 def main():
     pageSize = 100
-    startPageNo = 1
+    startPageNo = 79
     endPageNo = 10000
     dbClient = DbClient('localhost', 27017, "SimilarQuestion")            
     
