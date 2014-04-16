@@ -7,7 +7,7 @@ import sys
 
 def main():
     
-    questionsFile = open('../../data/python_questions_with_body_abridged.txt')
+    questionsFile = open('../../data/relevant_python_questions_with_body.txt')
     questions = []
     
     for q in questionsFile:
@@ -56,14 +56,18 @@ def main():
         tfidf = Vectorizer_TFIDF('title')
         vectorizers[tfidf.getName()] = tfidf
         tfidf = Vectorizer_TFIDF('body')
+<<<<<<< HEAD
         vectorizers[tfidf.getName()] = tfidf
 
+=======
+        #vectorizers[tfidf.getName()] = tfidf
         
-    linkedFile = open('../../data/python_linked.txt')
-    linkedDocs = {}
-    for q in linkedFile:
-        d = json.loads(q)
-        linkedDocs[d['qid']] = d['linked']
+>>>>>>> FETCH_HEAD
+        
+    linkedFile = open('../../data/full_python_linked.txt')
+    f = linkedFile.read()
+    #print f
+    linkedDocs = makeIntIndexes(json.loads(f))
         
     #print "linkedDocs", linkedDocs 
     engine = ExperimentEngine(index, linkedDocs, vectorizers)
@@ -71,7 +75,11 @@ def main():
     stats = engine.runExperiments()
     
 
-
+def makeIntIndexes(dictionary):
+    newd = {}
+    for i in dictionary:
+        newd[int(i)] = dictionary[i]
+    return newd
 
 if __name__ == '__main__':     
     main()
