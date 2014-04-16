@@ -56,13 +56,9 @@ def main():
         tfidf = Vectorizer_TFIDF('title')
         vectorizers[tfidf.getName()] = tfidf
         tfidf = Vectorizer_TFIDF('body')
-<<<<<<< HEAD
         vectorizers[tfidf.getName()] = tfidf
 
-=======
-        #vectorizers[tfidf.getName()] = tfidf
-        
->>>>>>> FETCH_HEAD
+
         
     linkedFile = open('../../data/full_python_linked.txt')
     f = linkedFile.read()
