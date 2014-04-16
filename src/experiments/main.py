@@ -66,6 +66,7 @@ def main():
         tfidf = Vectorizer_TFIDF('title')
         vectorizers[tfidf.getName()] = tfidf
         tfidf = Vectorizer_TFIDF('body')
+        vectorizers[tfidf.getName()] = tfidf
         
     linkedFile = open('../../data/full_python_linked.txt')
     f = linkedFile.read()
