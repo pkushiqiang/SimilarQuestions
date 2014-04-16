@@ -1,7 +1,4 @@
-import sys
-sys.path.append("/usr/local/lib/python2.7/site-packages/") #PYTHONPATH
-import nltk
-from nltk.corpus import wordnet as wn
+
 from vectorizer import Vectorizer
 
 class Vectorizer_NV(Vectorizer):

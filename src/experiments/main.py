@@ -2,6 +2,7 @@ from experimentEngine import ExperimentEngine
 from index import Index
 from vectorizer_TFIDF import Vectorizer_TFIDF
 from vectorizer_Synonym import Vectorizer_Synonym
+from vectorizer_NV import Vectorizer_NV
 import json
 import sys
 
