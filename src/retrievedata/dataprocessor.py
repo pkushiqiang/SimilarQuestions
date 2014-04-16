@@ -84,7 +84,7 @@ class DataProcessor:
     def dumpLinkedQuestions(self, collectionName, fileName, pageNum=1000):
          question_coll = self.dbClient.getCollection(collectionName)
          find_spec = { "items" : { "$exists":True},  
-                  "$where" : "this.items.length > 5" }  
+                  "$where" : "this.items.length > 1" }  
          find_sort = { "items" : { "$size" :-1} } 
          
          self.dumpDataToFile(DataProcessor.processLinkedQuestion2, question_coll, find_spec, find_sort ,fileName,pageNum)
