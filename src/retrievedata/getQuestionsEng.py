@@ -42,7 +42,7 @@ class QuestionGetter:
         content = self.makeRequest(params)
         
         json_data = json.loads(content)    
-     #   print json_data
+        print json_data
         has_more = json_data["has_more"]
         print "has_more= " , has_more
         
@@ -87,7 +87,7 @@ class QuestionGetter:
         
 def main():
     pageSize = 100
-    startPageNo = 12
+    startPageNo = 1
     endPageNo = 10000
     dbClient = DbClient('localhost', 27017, "SimilarQuestion")
     collection = dbClient.getCollection("english_questions")

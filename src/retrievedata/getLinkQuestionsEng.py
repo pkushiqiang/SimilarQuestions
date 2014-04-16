@@ -22,10 +22,12 @@ class LinkedQuestionGetter(ApiClient):
         self.url_pre = 'http://api.stackexchange.com/2.2/questions/%s/linked?%s'
         self.dbClient = dbClient
         self.collection =  self.dbClient.getCollection(collectionName)
-     
+        self.base_params['site'] = "english.stackexchange.com"        
+        
     def makeUrl(self, qid):
         param_str = urllib.urlencode(self.base_params)  
         url = self.url_pre % (qid, param_str)
+    #    print url
         return url
     
     def getLinkedByQuestion(self, qid):
@@ -67,7 +69,12 @@ class LinkedQuestionGetter(ApiClient):
             while retry:
                 try:
                     content = self.getLinkedByQuestion(qid)
-                    retry = False
+                    json_data = json.loads(content)
+                    if   json_data.has_key("error_id"):  
+                        print qid, "retry----"
+                        time.sleep(10)
+                    else: 
+                        retry = False
                 except IOError as e: 
                     print " "
                     print "meet IO error when get NO. %d, qid=%s" %(i,qid)
@@ -101,7 +108,7 @@ class RelatedQuestionGetter(LinkedQuestionGetter):
         
 def main():
     pageSize = 100
-    startPageNo = 79
+    startPageNo = 80
     endPageNo = 10000
     dbClient = DbClient('localhost', 27017, "SimilarQuestion")            
     

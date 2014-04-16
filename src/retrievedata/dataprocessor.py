@@ -119,7 +119,7 @@ def main():
   #  dataProcessor.dumpLinkedQuestions(10)
   #  dataProcessor.dumpRelatedQuestions(1000)
   #  dataProcessor.dumpLinkedQuestions2(10)
-       
+    '''   
     colletionName = "english_questions" 
     fileName = "..\..\data\english_questions_body.txt"
     dataProcessor.dumpQuestion( colletionName, fileName ) 
@@ -128,7 +128,7 @@ def main():
     colletionName = "english_link" 
     fileName = "..\..\data\english_link.txt"
     dataProcessor.dumpLinkedQuestions(colletionName, fileName)
-    '''
+     
    
 if __name__ == "__main__": 
     main()
