@@ -123,7 +123,8 @@ class ExperimentEngine():
         for i in stats:
             print i
             for k in sorted(stats[i]):
-                print ' ', k+":", stats[i][k]       
+                if k == 'NDCG' or k=='topRank':
+                    print ' ', k+":", stats[i][k]       
         
         return stats
         
