@@ -44,8 +44,8 @@ class Vectorizer_NV(Vectorizer):
             #else:
                 #vector[term] = 1         
              
-        print vector
-        print
-        print testingVector
-        exit(0)    
+        #print vector
+        #print
+        #print testingVector
+        #exit(0)    
         return vector

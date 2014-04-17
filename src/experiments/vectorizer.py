@@ -3,12 +3,15 @@ from cache import Cache
 
 class Vectorizer(object):
     cache = Cache(10000) # this cache (behaves just like a queue/dictionary) should be referenced static
+    dataset = ''
+    
     
     def __init__(self, name):
         self.name = name
     
     def getName(self):
-        return self.name
+        print self.name + '-'+ Vectorizer.dataset
+        return self.name + '-'+ Vectorizer.dataset
     
     def getVector(self, document):
         if (str(document.getName())+'&'+self.getName()) in self.cache:

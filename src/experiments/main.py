@@ -3,12 +3,28 @@ from index import Index
 from vectorizer_TFIDF import Vectorizer_TFIDF
 from vectorizer_Synonym import Vectorizer_Synonym
 from vectorizer_NV import Vectorizer_NV
+from vectorizer import Vectorizer
 import json
 import sys
 
 def main():
     
-    questionsFile = open('../../data/relevant_python_questions_with_body.txt')
+    
+    if 'Python' in sys.argv:
+        Vectorizer.dataset = 'Python'    
+        questionsfilename = '../../data/relevant_python_questions_with_body.txt'
+        linkedfilename = '../../data/full_python_linked.txt'
+    if 'English' in sys.argv:
+        Vectorizer.dataset = 'English'
+        questionsfilename = '../../data/relevant_english_questions_with_body.txt'
+        linkedfilename = '../../data/full_english_linked.txt'
+    if 'Combined' in sys.argv:
+        Vectorizer.dataset = 'Combined'   
+        questionsfilename = '../../data/relevant_combined_questions_with_body.txt'    
+        linkedfilename = '../../data/full_combined_linked.txt'
+
+    questionsFile = open(questionsfilename)
+    
     questions = []
     
     for q in questionsFile:
@@ -16,9 +32,11 @@ def main():
 
     index = Index(questions)
     
+    
     vectorizers = {}
     # if we want to call only some of them (from commandline)...
     if len(sys.argv) > 1:
+        
         if 'tfidf' in sys.argv:
             tfidf = Vectorizer_TFIDF()  
             vectorizers[tfidf.getName()] = tfidf
@@ -55,7 +73,7 @@ def main():
             nounverb = Vectorizer_NV()  
             vectorizers[nounverb.getName()] = nounverb
         if 'nounverb-title' in sys.argv:
-            nounverb = Vectorizer_NV('nounverb')
+            nounverb = Vectorizer_NV('title')
             vectorizers[nounverb.getName()] = nounverb
         if 'nounverb-body' in sys.argv:
             nounverb = Vectorizer_NV('body')
@@ -69,7 +87,7 @@ def main():
         tfidf = Vectorizer_TFIDF('body')
         vectorizers[tfidf.getName()] = tfidf
         
-    linkedFile = open('../../data/full_python_linked.txt')
+    linkedFile = open(linkedfilename)
     f = linkedFile.read()
     #print f
     linkedDocs = makeIntIndexes(json.loads(f))
