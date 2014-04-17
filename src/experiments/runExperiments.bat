@@ -1,2 +1,3 @@
-python main.py tfidf-title > ../../results/python_tfidf-title.txt
-python main.py synonym 2 > ../../results/python_synonym-2-all.txt
+python main.py nounverb Python > ../../results/python_nounverb-all.txt
+python main.py tfidf-title English > ../../results/english_tfidf-title.txt
+python main.py nounverb-body English > ../../results/english_nounverb-body.txt

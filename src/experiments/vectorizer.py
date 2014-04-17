@@ -10,7 +10,6 @@ class Vectorizer(object):
         self.name = name
     
     def getName(self):
-        print self.name + '-'+ Vectorizer.dataset
         return self.name + '-'+ Vectorizer.dataset
     
     def getVector(self, document):
