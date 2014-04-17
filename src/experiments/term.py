@@ -10,6 +10,7 @@ class Term:
         self.term = term
         self.postingsList = []
         self.idf = 0
+        self.synonyms = None
         
     def getPostingsList(self):
         return self.postingsList
@@ -31,3 +32,9 @@ class Term:
         
     def getIDF(self): #this is actually df
         return self.idf
+    
+    def getSynonyms(self):
+        return self.synonyms
+    
+    def setSynonyms(self, synonyms):
+        self.synonyms = synonyms

@@ -50,14 +50,9 @@ class ExperimentEngine():
             stats[name] = {}
             stats[name]['time'] = self.currentMilliTime()
             results[name] = {}
-<<<<<<< HEAD
 
-            
-=======
-        
         numDocs = 0
         
->>>>>>> FETCH_HEAD
         for doc in set(self.linkedDocs).intersection(set(self.documents)): #we only need to calculate pairs for docs we know links for
             numDocs += 1
             
@@ -128,7 +123,7 @@ class ExperimentEngine():
         for i in stats:
             print i
             for k in sorted(stats[i]):
-                if k == 'NDCG' or k=='topRank':
+                if k != 'NDCG' and k != 'topRank':
                     print ' ', k+":", stats[i][k]       
         
         return stats
