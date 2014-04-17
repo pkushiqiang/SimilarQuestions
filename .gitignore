@@ -1,3 +1,4 @@
 *.pyc
 *.DS_Store
 python_questions_with_body.txt
+*.spyderproject

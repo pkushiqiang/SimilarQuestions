@@ -17,6 +17,7 @@ class DataProcessor:
          a = {}
          a["qid"] = question["_id"]
          a["title"] = question["title"]
+         a["body"] = question["body_markdown"]
          return a
          
     @staticmethod
@@ -81,14 +82,13 @@ class DataProcessor:
         fileName = "..\..\data\pyton_questions.txt"
         self.dumpDataToFile(DataProcessor.processQuestion, question_coll, fileName,pageNum)
      
-    def dumpLinkedQuestions(self,pageNum):
-         question_coll = self.dbClient.getCollection("question_link_python")
-         fileName = "..\..\data\question_link_python.txt"
+    def dumpLinkedQuestions(self, collectionName, fileName, pageNum=1000):
+         question_coll = self.dbClient.getCollection(collectionName)
          find_spec = { "items" : { "$exists":True},  
-                  "$where" : "this.items.length > 5" }  
+                  "$where" : "this.items.length > 1" }  
          find_sort = { "items" : { "$size" :-1} } 
          
-         self.dumpDataToFile(DataProcessor.processLinkedQuestion, question_coll, find_spec, find_sort ,fileName,pageNum)
+         self.dumpDataToFile(DataProcessor.processLinkedQuestion2, question_coll, find_spec, find_sort ,fileName,pageNum)
     
     
     def dumpLinkedQuestions2(self,pageNum):
@@ -107,14 +107,28 @@ class DataProcessor:
          find_sort = None
          
          self.dumpDataToFile(DataProcessor.processRelatedQuestion, question_coll, find_spec, find_sort ,fileName,pageNum)
-       
+     
+    def dumpQuestion(self, collectionName, fileName, pageNum=1000):
+          question_coll = self.dbClient.getCollection(collectionName)         
+          self.dumpDataToFile(DataProcessor.processQuestion, question_coll, None, None, fileName,pageNum)
+    
     
 def main():
     dataProcessor = DataProcessor()    
   #  dataProcessor.dumpPythonQuestions(1000)
   #  dataProcessor.dumpLinkedQuestions(10)
   #  dataProcessor.dumpRelatedQuestions(1000)
-    dataProcessor.dumpLinkedQuestions2(10)
+  #  dataProcessor.dumpLinkedQuestions2(10)
+    '''   
+    colletionName = "english_questions" 
+    fileName = "..\..\data\english_questions_body.txt"
+    dataProcessor.dumpQuestion( colletionName, fileName ) 
+    
+    '''  
+    colletionName = "english_link" 
+    fileName = "..\..\data\english_link.txt"
+    dataProcessor.dumpLinkedQuestions(colletionName, fileName)
+     
    
 if __name__ == "__main__": 
     main()

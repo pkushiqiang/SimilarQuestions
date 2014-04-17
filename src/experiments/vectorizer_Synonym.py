@@ -10,7 +10,7 @@ class Vectorizer_Synonym(Vectorizer):
     # here the 'name' is 'Synonym'
     def __init__(self, num_syn, scope='all'):
         super(type(self),self).__init__('Synonym'+'-'+scope)
-        self.num_syn = num_syn
+        self.num_syn = int(num_syn)
         self.scope = scope
     
     # this is the function that creates the vector. Since the TFIDF code is already written into
@@ -26,15 +26,26 @@ class Vectorizer_Synonym(Vectorizer):
             postingsList = document.getPostingsList()
             
         vector = {}
-        testingVector={}
+        
         for term in postingsList:
+            
+            index = postingsList[term].index
                     
             # this is the ONLY line in this function that is tfidf specific. Most likely, everything
             # else in this function should stay the same for all vectorizers
             vector[term] = postingsList[term].getTFIDF()
-            testingVector[term] = postingsList[term].getTFIDF()
 
             synonymSet = set()
+
+            savedSyns = index.getTerm(term).getSynonyms()
+            if savedSyns != None:
+                for score, term2 in savedSyns:
+                    if term2 not in vector:
+                        score = postingsList[term].getTFIDF() * score
+                        vector[term2] = score  
+                continue # discontinue the current loop iteration
+                
+            
             for synset in wn.synsets(term):
                 #print synset.lemma_names
                 for synonym in synset.lemma_names:
@@ -56,14 +67,13 @@ class Vectorizer_Synonym(Vectorizer):
                 #print zip(scoreList, synonymList)   
                 additionalTerms = sorted(zip(scoreList, synonymList), reverse=True)
                 additionalTerms = filter(lambda x: x[0]!=None, additionalTerms)
-                additionalTerms = additionalTerms[:self.num_syn]            
+                additionalTerms = additionalTerms[:self.num_syn]  
+                index.getTerm(term).setSynonyms(additionalTerms)
                 
                 for score, term2 in additionalTerms:
                     if term2 not in vector:
                         score = postingsList[term].getTFIDF() * score
                         vector[term2] = score
-        print vector
-        print testingVector
-        exit(0)
+        
                 
         return vector

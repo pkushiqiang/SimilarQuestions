@@ -2,6 +2,7 @@ from experimentEngine import ExperimentEngine
 from index import Index
 from vectorizer_TFIDF import Vectorizer_TFIDF
 from vectorizer_Synonym import Vectorizer_Synonym
+from vectorizer_NV import Vectorizer_NV
 import json
 import sys
 
@@ -48,7 +49,17 @@ def main():
             else:
                 num_syn = 2 
             synonym = Vectorizer_Synonym(num_syn, 'body')  
-            vectorizers[synonym.getName()] = synonym             
+            vectorizers[synonym.getName()] = synonym  
+        
+        if 'nounverb' in sys.argv:
+            nounverb = Vectorizer_NV()  
+            vectorizers[nounverb.getName()] = nounverb
+        if 'nounverb-title' in sys.argv:
+            nounverb = Vectorizer_NV('nounverb')
+            vectorizers[nounverb.getName()] = nounverb
+        if 'nounverb-body' in sys.argv:
+            nounverb = Vectorizer_NV('body')
+            vectorizers[nounverb.getName()] = nounverb        
 
     else: # if we want to run all of them
         tfidf = Vectorizer_TFIDF()
@@ -57,8 +68,6 @@ def main():
         vectorizers[tfidf.getName()] = tfidf
         tfidf = Vectorizer_TFIDF('body')
         vectorizers[tfidf.getName()] = tfidf
-
-
         
     linkedFile = open('../../data/full_python_linked.txt')
     f = linkedFile.read()
