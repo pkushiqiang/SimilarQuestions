@@ -28,21 +28,33 @@ class Vectorizer_NV(Vectorizer):
         testingVector={}
         NVlist = ['NN','NNP','NNPS','NNS','VB','VBD','VBG','VBN','VBP','VBZ']
         for term in postingsList:
-                    
+            
+            index = postingsList[term].index
             # this is the ONLY line in this function that is tfidf specific. Most likely, everything
             # else in this function should stay the same for all vectorizers
-            tag = nltk.pos_tag([term])
-            if tag[0][1] in NVlist:
-                vector[term] = postingsList[term].getTFIDF() * 1.2
-            else:
-                vector[term] = postingsList[term].getTFIDF()           
-            testingVector[term] = postingsList[term].getTFIDF()     
             
-            # Another version
-            #if tag[0][1] in NVlist:
-                #vector[term] = 1.2
-            #else:
-                #vector[term] = 1         
+            if index.getTerm(term).getIsNV() != None:
+                if index.getTerm(term).getIsNV() == True:
+                    vector[term] = postingsList[term].getTFIDF() * 1.2
+                else:
+                    vector[term] = postingsList[term].getTFIDF()           
+                    
+            else:
+                tag = nltk.pos_tag([term])
+                isNV = False
+                if tag[0][1] in NVlist:
+                    vector[term] = postingsList[term].getTFIDF() * 1.2
+                    isNV = True
+                else:
+                    vector[term] = postingsList[term].getTFIDF()           
+                testingVector[term] = postingsList[term].getTFIDF()     
+                
+                # Another version
+                #if tag[0][1] in NVlist:
+                    #vector[term] = 1.2
+                #else:
+                    #vector[term] = 1   
+                index.getTerm(term).setIsNV(isNV)
              
         #print vector
         #print

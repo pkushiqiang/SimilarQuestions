@@ -2,7 +2,7 @@ import math
 from cache import Cache
 
 class Vectorizer(object):
-    cache = Cache(10000) # this cache (behaves just like a queue/dictionary) should be referenced static
+    cache = Cache(20000) # this cache (behaves just like a queue/dictionary) should be referenced static
     dataset = ''
     
     

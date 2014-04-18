@@ -27,7 +27,7 @@ allstats = {}
 for root, _, files in os.walk('../../results'):
     for f in files:
         fullpath = os.path.join(root, f)
-        print fullpath
+        #print fullpath
         if fullpath.endswith('.txt'):
             stats = open(fullpath).readline()
             if len(stats) > 0:
@@ -35,9 +35,6 @@ for root, _, files in os.walk('../../results'):
                 stats = json.loads(stats)
                 allstats.update(stats)
                 
-for i in sorted(allstats):
-    print i, allstats[i]['_NDCG_mean']
-    
 
 stats = {}
 for i in sorted(allstats):
@@ -46,20 +43,17 @@ for i in sorted(allstats):
     dataset = s[-1]
     vectorizer = s[0]
     scope = s[1]
-    print dataset, vectorizer, scope
     stats[dataset] = stats.get(dataset, {})
-    print stats
     stats[dataset][vectorizer] = stats[dataset].get(vectorizer,{})
     stats[dataset][vectorizer][scope] = allstats[i]
-    print s[2], s[0], s[1]
     
     
-for i in stats:
-    print i
+'''for i in stats:
+    #print i
     for j in stats[i]:
-        print '   ',j
+        #print '   ',j
         for k in stats[i][j]:
-            print '       ',k
+            #print '       ',k'''
                 
 
 #----------------------------------------------------------------------------------------------------
@@ -88,7 +82,7 @@ for dataset in stats:
     
         if v == 0:
             N = len(vLabels)
-            print N
+            #print N
             ind = np.arange(N)  # the x locations for the groups
             width = 0.15       # the width of the bars
             fig, ax = plt.subplots()
@@ -105,9 +99,19 @@ for dataset in stats:
     ax.set_title('Mean NDCG Scores For '+dataset+' Dataset')
     ax.set_xticks(ind+width)
     ax.set_xticklabels( ['Title Only', 'Body Only', 'Title+Body'] )
-    print [x[0] for x in rects]
-    print vectorizers
+    #print [x[0] for x in rects]
+    #print vectorizers
     ax.legend( [x[0] for x in rects] , vectorizers, loc='upper left' )
+    
+    def autolabel(rects):
+        # attach some text labels
+        for rect in rects:
+            height = rect.get_height()
+            ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, ('%.2f'%height).lstrip('0'),
+                    ha='center', va='bottom')
+    
+    for rect in rects:
+        autolabel(rect)    
     
     plt.savefig('../../results/'+dataset+'_every-means_plot.pdf', transparent=True)
     
@@ -124,11 +128,11 @@ for dataset in stats:
     
     vMeans = []
 
-    for i in range(len(stats[dataset])):
+    scopes = ['title','body','all']
+    for i in range(len(scopes)):
         vMeans+= [[]]
         
-    print vMeans
-    scopes = ['title','body','all']
+    #print vMeans
     
     vLabels = sorted(stats[dataset].keys())
         
@@ -143,9 +147,9 @@ for dataset in stats:
         v+=1   
     
     N = len(vLabels)
-    print vMeans
+    #print vMeans
     ind = np.arange(N)  # the x locations for the groups
-    width = 0.15       # the width of the bars
+    width = 0.25       # the width of the bars
     fig, ax = plt.subplots()    
     colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
 
@@ -163,7 +167,17 @@ for dataset in stats:
     ax.set_xticklabels( vLabels )
     ax.legend( [x[0] for x in rects] , ['Title Only', 'Body Only', 'Title+Body'], loc='upper left' )
     
-    plt.ylim(0,.8)    
+    plt.ylim(0,.8) 
+    
+    def autolabel(rects):
+        # attach some text labels
+        for rect in rects:
+            height = rect.get_height()
+            ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, ('%.2f'%height).lstrip('0'),
+                    ha='center', va='bottom')
+    
+    for rect in rects:
+        autolabel(rect)    
     
     plt.savefig('../../results/'+dataset+'_all-medians_plot.pdf', transparent=True)
     
@@ -182,7 +196,7 @@ for vectorizer in sorted(stats['Python']):
     vMeans += [[]]
     vStdev += [[]]    
 
-print vMeans
+#print vMeans
 v = 0
 rects = []
     
@@ -196,10 +210,10 @@ for vectorizer in vectorizers:
             vMeans[vectorizers.index(vectorizer)] += [0.]
             vStdev[vectorizers.index(vectorizer)] += [0.]
                 
-print vMeans    
+#print vMeans    
     
 N = len(datasets)
-print N
+#print N
 ind = np.arange(N)  # the x locations for the groups
 width = 0.15       # the width of the bars
 fig, ax = plt.subplots()
@@ -211,7 +225,7 @@ colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
 v=0  
 
 for i in range(len(vMeans)):
-    print 'vmeansi',vMeans[i]
+    #print 'vmeansi',vMeans[i]
     rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=np.array(vStdev[i]),error_kw=dict(ecolor='gray', lw=1, capsize=5, capthick=2))]
     v+=1
 
@@ -221,6 +235,17 @@ ax.set_title('Mean NDCG Scores for Title+Body Across Datasets')
 ax.set_xticks(ind+width)
 ax.set_xticklabels( datasets )
 ax.legend( [x[0] for x in rects] , vectorizers, loc='upper left' )
+
+def autolabel(rects):
+    # attach some text labels
+    for rect in rects:
+        height = rect.get_height()
+        ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, ('%.2f'%height).lstrip('0'),
+                ha='center', va='bottom')
+
+for rect in rects:
+    autolabel(rect)
+
 
 plt.savefig('../../results/all-means-by-dataset_plot.pdf', transparent=True)
 
@@ -251,7 +276,7 @@ for dataset in stats:
     
         if v == 0:
             N = len(vLabels)
-            print N
+            #print N
             ind = np.arange(N)  # the x locations for the groups
             width = 0.15      # the width of the bars
             fig, ax = plt.subplots()
@@ -268,9 +293,19 @@ for dataset in stats:
     ax.set_title('Median NDCG Scores By Vectorizer For '+dataset+' Dataset')
     ax.set_xticks(ind+width)
     ax.set_xticklabels( ['Title Only', 'Body Only', 'Title+Body'] )
-    print [x[0] for x in rects]
-    print vectorizers
+    #print [x[0] for x in rects]
+    #print vectorizers
     ax.legend( [x[0] for x in rects] , vectorizers, loc='upper left' )
+    
+    def autolabel(rects):
+        # attach some text labels
+        for rect in rects:
+            height = rect.get_height()
+            ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, ('%.2f'%height).lstrip('0'),
+                    ha='center', va='bottom')
+    
+    for rect in rects:
+        autolabel(rect)    
     
     plt.savefig('../../results/'+dataset+'_every-medians_plot.pdf', transparent=True)
     
@@ -300,7 +335,7 @@ for dataset in stats:
     
         if v == 0:
             N = len(vLabels)
-            print N
+            #print N
             ind = np.arange(N)  # the x locations for the groups
             width = 0.15       # the width of the bars
             fig, ax = plt.subplots()
@@ -308,12 +343,12 @@ for dataset in stats:
             
             
         colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
-        print '------------------------------'
-        print ind+width*(v+1)
-        print np.array(vMeans)
-        print width
-        print colors[v]
-        print np.array(vStdev)
+        #print '------------------------------'
+        #print ind+width*(v+1)
+        #print np.array(vMeans)
+        #print width
+        #print colors[v]
+        #print np.array(vStdev)
         rects += [ax.bar(ind+(width*(v)), np.array(vMeans), width, color=colors[v])]
         
         v+=1
@@ -323,9 +358,19 @@ for dataset in stats:
     ax.set_title('Percentage of Similarity Rankings at Position 1 For '+dataset+' Dataset')
     ax.set_xticks(ind+width)
     ax.set_xticklabels( ['Title Only', 'Body Only', 'Title+Body'] )
-    print [x[0] for x in rects]
-    print vectorizers
+    #print [x[0] for x in rects]
+    #print vectorizers
     ax.legend( [x[0] for x in rects] , vectorizers, loc='upper left' )
+    
+    def autolabel(rects):
+        # attach some text labels
+        for rect in rects:
+            height = rect.get_height()
+            ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, ('%.2f'%height).lstrip('0'),
+                    ha='center', va='bottom')
+    
+    for rect in rects:
+        autolabel(rect)    
     
     plt.savefig('../../results/'+dataset+'_every-Percent@Rank1_plot.pdf', transparent=True)
     
@@ -348,7 +393,7 @@ for vectorizer in sorted(stats['Python']):
     vMeans += [[]]
     vStdev += [[]]    
 
-print vMeans
+#print vMeans
 v = 0
 rects = []
     
@@ -362,10 +407,10 @@ for vectorizer in vectorizers:
             vMeans[vectorizers.index(vectorizer)] += [0.]
             vStdev[vectorizers.index(vectorizer)] += [0.]
                 
-print vMeans    
+#print vMeans    
     
 N = len(datasets)
-print N
+#print N
 ind = np.arange(N)  # the x locations for the groups
 width = 0.15       # the width of the bars
 fig, ax = plt.subplots()
@@ -376,9 +421,9 @@ colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
 v=0  
 
 for i in range(len(vMeans)):
-    print 'vmeansi',vMeans[i]
+    #print 'vmeansi',vMeans[i]
     #rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=np.array(vStdev[i]))]
-    rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v])]
+    rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=0,error_kw=dict(ecolor='black', lw=1, capsize=5, capthick=1))]
     v+=1
 
 # add some
@@ -417,7 +462,7 @@ for dataset in stats:
     for i in range(len(stats[dataset])):
         vMeans+= [[]]
         
-    print vMeans
+    #print vMeans
     scopes = ['title','body','all']
     
     vLabels = sorted(stats[dataset].keys())
@@ -433,7 +478,7 @@ for dataset in stats:
         v+=1   
     
     N = len(vLabels)
-    print vMeans
+    #print vMeans
     ind = np.arange(N)  # the x locations for the groups
     width = 0.15       # the width of the bars
     fig, ax = plt.subplots()    
@@ -482,7 +527,7 @@ for vectorizer in sorted(stats['Python']):
     
     vMeans += [[]]   
 
-print vMeans
+#print vMeans
 v = 0
 rects = []
     
@@ -494,11 +539,12 @@ for vectorizer in vectorizers:
         else:
             vMeans[vectorizers.index(vectorizer)] += [0.]
                 
-print vMeans    
+#print vMeans    
     
-N = len(datasets)
-print N
+N = len(datasets )
+#print N
 ind = np.arange(N)  # the x locations for the groups
+print ind
 width = 0.15       # the width of the bars
 fig, ax = plt.subplots()
         
@@ -508,9 +554,9 @@ colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
 v=0  
 
 for i in range(len(vMeans)):
-    print 'vmeansi',vMeans[i]
+    #print 'vmeansi',vMeans[i]
     #rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=np.array(vStdev[i]))]
-    rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v])]
+    rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=0,error_kw=dict(ecolor='black', lw=1, capsize=5, capthick=1))]
     v+=1
 
 # add some
@@ -521,7 +567,15 @@ ax.set_xticklabels( datasets )
 ax.legend( [x[0] for x in rects] , vectorizers, loc='upper left' )
 plt.ylim(0,.5)    
 
+def autolabel(rects):
+    # attach some text labels
+    for rect in rects:
+        height = rect.get_height()
+        ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, ('%.2f'%height).lstrip('0'),
+                ha='center', va='bottom')
 
+for rect in rects:
+    autolabel(rect)
 
 plt.savefig('../../results/all-percent@rank1-by-dataset_plot.pdf', transparent=True)
 
