@@ -11,6 +11,11 @@ class Vectorizer_Synonym(Vectorizer):
     def __init__(self, num_syn, scope='all'):
         super(type(self),self).__init__('Synonym'+'-'+scope)
         self.num_syn = int(num_syn)
+        
+        if num_syn == 3:
+            print 'we are not running synonym 3 for now.'
+            exit(0)
+        
         self.scope = scope
     
     # this is the function that creates the vector. Since the TFIDF code is already written into

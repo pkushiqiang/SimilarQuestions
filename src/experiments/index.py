@@ -16,7 +16,7 @@ import math
 
 class Index:   
     
-    def __init__(self, questions):
+    def __init__(self, questions, ngram=1):
         self.documents = {}
         self.index = {}
         
@@ -25,7 +25,7 @@ class Index:
         #questions is formatted as a list of dictionaries with attributes 'docID', 'text' and 'cluster'
         for d in range(len(questions)):
             #print questions[d]
-            doc = Document(title=questions[d]['title'],body=questions[d]['body'], docID = questions[d]['qid'])
+            doc = Document(title=questions[d]['title'],body=questions[d]['body'], docID = questions[d]['qid'], gram=ngram)
             self.documents[doc.getName()] = doc
             #print 'loading', doc.getName(), '...'
             #doc.printPostingsList()

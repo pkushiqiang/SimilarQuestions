@@ -30,7 +30,12 @@ def main():
     for q in questionsFile:
         questions += [json.loads(q)]
 
-    index = Index(questions)
+
+    if 'n-gram' in sys.argv:
+        gram = int(sys.argv[-1])
+    else:
+        gram = 1
+    index = Index(questions,gram)
     
     
     vectorizers = {}
@@ -77,7 +82,29 @@ def main():
             vectorizers[nounverb.getName()] = nounverb
         if 'nounverb-body' in sys.argv:
             nounverb = Vectorizer_NV('body')
-            vectorizers[nounverb.getName()] = nounverb        
+            vectorizers[nounverb.getName()] = nounverb 
+            
+        if 'n-gram' in sys.argv:
+            if sys.argv[-1].isdigit():
+                grams = int(sys.argv[-1])
+            else:
+                grams = 2 
+            ngram = Vectorizer_NGram(grams)  
+            vectorizers[ngram.getName()] = synonym        
+        if 'n-gram-title' in sys.argv:
+            if sys.argv[-1].isdigit():
+                grams = int(sys.argv[-1])
+            else:
+                grams = 2 
+            ngram = Vectorizer_NGram(grams,'title')  
+            vectorizers[ngram.getName()] = synonym  
+        if 'n-gram-body' in sys.argv:
+            if sys.argv[-1].isdigit():
+                grams = int(sys.argv[-1])
+            else:
+                grams = 2 
+            ngram = Vectorizer_NGram(grams,'body')  
+            vectorizers[ngram.getName()] = synonym                
 
     else: # if we want to run all of them
         tfidf = Vectorizer_TFIDF()

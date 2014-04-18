@@ -2,3 +2,6 @@
 *.DS_Store
 python_questions_with_body.txt
 *.spyderproject
+data/english_linked.txt
+
+*.bat

@@ -444,7 +444,78 @@ def autolabel(rects):
 for rect in rects:
     autolabel(rect)
 
-plt.savefig('../../results/all-topRanks-by-dataset_plot.pdf', transparent=True)
+plt.savefig('../../results/all-median-topRanks-by-dataset_plot.pdf', transparent=True)
+
+
+
+#plot all topRank results with std. dev bars grouped by vectorizer & across all datasets
+plt.figure()
+
+datasets = ['Python','English','Combined']
+vMeans = []
+vStdev = []
+vectorizers = []
+for vectorizer in sorted(stats['Python']):
+    
+    vectorizers += [vectorizer]
+    
+    vMeans += [[]]
+    vStdev += [[]]    
+
+#print vMeans
+v = 0
+rects = []
+    
+    
+for vectorizer in vectorizers:  
+    for dataset in datasets:
+        if dataset in stats and vectorizer in stats[dataset] and 'all' in stats[dataset][vectorizer]:
+            vMeans[vectorizers.index(vectorizer)] += [float(stats[dataset][vectorizer][scope]['_TopRank_mean'])]
+            vStdev[vectorizers.index(vectorizer)] += [float(stats[dataset][vectorizer][scope]['_TopRank_standardDeviation'])]
+        else:
+            vMeans[vectorizers.index(vectorizer)] += [0.]
+            vStdev[vectorizers.index(vectorizer)] += [0.]
+                
+#print vMeans    
+    
+N = len(datasets)
+#print N
+ind = np.arange(N)  # the x locations for the groups
+width = 0.15       # the width of the bars
+fig, ax = plt.subplots()
+        
+        
+colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+    
+v=0  
+
+for i in range(len(vMeans)):
+    #print 'vmeansi',vMeans[i]
+    #rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=np.array(vStdev[i]))]
+    rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=np.array(vStdev[i]),error_kw=dict(ecolor='gray', lw=1, capsize=5, capthick=2))]
+    v+=1
+
+# add some
+ax.set_ylabel('Scores')
+ax.set_title('Mean Rank of First Similar Question for Title+Body Across Datasets')
+ax.set_xticks(ind+width)
+ax.set_xticklabels( datasets )
+ax.legend( [x[0] for x in rects] , vectorizers, loc='upper left' )
+plt.ylim(0)    
+
+def autolabel(rects):
+    # attach some text labels
+    for rect in rects:
+        height = rect.get_height()
+        ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, '%d'%int(height),
+                ha='center', va='bottom')
+
+for rect in rects:
+    autolabel(rect)
+
+plt.savefig('../../results/all-mean-topRanks-by-dataset_plot.pdf', transparent=True)
+
+
 
 
 
@@ -498,7 +569,7 @@ for dataset in stats:
     ax.set_xticklabels( vLabels )
     ax.legend( [x[0] for x in rects] , ['Title Only', 'Body Only', 'Title+Body'], loc='upper left' )
     
-    plt.ylim(0,85)    
+    plt.ylim(0,100)    
     
     def autolabel(rects):
         # attach some text labels
