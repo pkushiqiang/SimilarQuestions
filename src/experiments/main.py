@@ -3,6 +3,7 @@ from index import Index
 from vectorizer_TFIDF import Vectorizer_TFIDF
 from vectorizer_Synonym import Vectorizer_Synonym
 from vectorizer_NV import Vectorizer_NV
+from vectorizer_NGram import Vectorizer_NGram
 from vectorizer import Vectorizer
 import json
 import sys
@@ -31,11 +32,11 @@ def main():
         questions += [json.loads(q)]
 
 
-    if 'n-gram' in sys.argv:
+    if 'n-gram' in ' '.join(sys.argv):
         gram = int(sys.argv[-1])
     else:
         gram = 1
-    index = Index(questions,gram)
+    index = Index(questions,ngram=gram)
     
     
     vectorizers = {}
@@ -90,21 +91,21 @@ def main():
             else:
                 grams = 2 
             ngram = Vectorizer_NGram(grams)  
-            vectorizers[ngram.getName()] = synonym        
+            vectorizers[ngram.getName()] = ngram        
         if 'n-gram-title' in sys.argv:
             if sys.argv[-1].isdigit():
                 grams = int(sys.argv[-1])
             else:
                 grams = 2 
             ngram = Vectorizer_NGram(grams,'title')  
-            vectorizers[ngram.getName()] = synonym  
+            vectorizers[ngram.getName()] = ngram  
         if 'n-gram-body' in sys.argv:
             if sys.argv[-1].isdigit():
                 grams = int(sys.argv[-1])
             else:
                 grams = 2 
             ngram = Vectorizer_NGram(grams,'body')  
-            vectorizers[ngram.getName()] = synonym                
+            vectorizers[ngram.getName()] = ngram                
 
     else: # if we want to run all of them
         tfidf = Vectorizer_TFIDF()

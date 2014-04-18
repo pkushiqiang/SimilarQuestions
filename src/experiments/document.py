@@ -20,16 +20,17 @@ class Document:
     cluster = None
     docID = -1
     # send in either path or text, but not both.
-    def __init__(self, path = None, body = None, title = None, docID = -1， gram=1):
+    def __init__(self, path = None, body = None, title = None, docID = -1, gram=1):
         self.postingsListTitle = {}
         self.postingsListBody = {}
+        self.gram = gram
+
         if title != None and body != None:
             self.processTitleString(title)
             self.processBodyString(body)
             self.name = ""
             self.path = ""
         self.name = docID     
-        self.gram = gram
         
     def read(self):
         f = open(self.path)
@@ -53,7 +54,6 @@ class Document:
         toekens = self._tokenizeOneGram(line)
         if self.gram == 1:
             return toekens
-        print len(toekens) , self.gram
         result = []
   
         if   len(toekens) <  self.gram :
@@ -64,7 +64,7 @@ class Document:
             for j in range(1,self.gram) :
                 token += " " + toekens[i+j]
             result.append(token)
-            
+        
         return result
             
     def _tokenizeOneGram(self, line):
@@ -130,3 +130,7 @@ class Document:
             
         
             
+if __name__ == '__main__':  
+    doc = Document(title='juicy juice is by far the best!',body='hello my name is stephanie and i love juicy juice.',gram=3)
+    print doc.getPostingsListBody()
+    

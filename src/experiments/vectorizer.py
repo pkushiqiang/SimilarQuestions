@@ -4,7 +4,7 @@ from cache import Cache
 class Vectorizer(object):
     cache = Cache(20000) # this cache (behaves just like a queue/dictionary) should be referenced static
     dataset = ''
-    
+    debug = False
     
     def __init__(self, name):
         self.name = name
@@ -20,6 +20,11 @@ class Vectorizer(object):
         
         #save to cache
         Vectorizer.cache[(str(document.getName())+'&'+self.getName())] = vector
+
+        if self.debug:
+            print vector
+            
+        
         return vector
         
     ''' this is the function that will be overwritten by all subclasses '''   
