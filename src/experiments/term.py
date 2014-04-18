@@ -11,6 +11,7 @@ class Term:
         self.postingsList = []
         self.idf = 0
         self.synonyms = None
+        self.isNV = None
         
     def getPostingsList(self):
         return self.postingsList
@@ -38,3 +39,9 @@ class Term:
     
     def setSynonyms(self, synonyms):
         self.synonyms = synonyms
+        
+    def setIsNV(self, isNV):
+        self.isNV = isNV
+        
+    def getIsNV(self):
+        return self.isNV
