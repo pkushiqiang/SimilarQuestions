@@ -27,8 +27,8 @@ allstats = {}
 for root, _, files in os.walk('../../results'):
     for f in files:
         fullpath = os.path.join(root, f)
-        #print fullpath
-        if fullpath.endswith('.txt'):
+        print fullpath
+        if fullpath.endswith('.txt') and 'synonym3' not in fullpath:
             stats = open(fullpath).readline()
             if len(stats) > 0:
                 #decode the first line of each file
@@ -89,7 +89,7 @@ for dataset in stats:
             plt.ylim(0,.8)    
             
             
-        colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+        colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95', '#bf5d95']
         rects += [ax.bar(ind+(width*(v)), np.array(vMeans), width, color=colors[v], yerr=np.array(vStdev),error_kw=dict(ecolor='gray', lw=1, capsize=5, capthick=2))]
         
         v+=1
@@ -151,7 +151,7 @@ for dataset in stats:
     ind = np.arange(N)  # the x locations for the groups
     width = 0.25       # the width of the bars
     fig, ax = plt.subplots()    
-    colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+    colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95']
 
     v=0
     for scope in scopes:    
@@ -220,7 +220,7 @@ fig, ax = plt.subplots()
 plt.ylim(0,.8)    
         
         
-colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95']
     
 v=0  
 
@@ -283,7 +283,7 @@ for dataset in stats:
             plt.ylim(0,.8)    
             
             
-        colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+        colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95', '#bf5d95']
         rects += [ax.bar(ind+(width*(v)), np.array(vMeans), width, color=colors[v])]
         
         v+=1
@@ -339,10 +339,10 @@ for dataset in stats:
             ind = np.arange(N)  # the x locations for the groups
             width = 0.15       # the width of the bars
             fig, ax = plt.subplots()
-            plt.ylim(0,.25)    
+            plt.ylim(0)    
             
             
-        colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+        colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95', '#bf5d95']
         #print '------------------------------'
         #print ind+width*(v+1)
         #print np.array(vMeans)
@@ -416,7 +416,7 @@ width = 0.15       # the width of the bars
 fig, ax = plt.subplots()
         
         
-colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95']
     
 v=0  
 
@@ -485,7 +485,7 @@ width = 0.15       # the width of the bars
 fig, ax = plt.subplots()
         
         
-colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95']
     
 v=0  
 
@@ -553,7 +553,7 @@ for dataset in stats:
     ind = np.arange(N)  # the x locations for the groups
     width = 0.15       # the width of the bars
     fig, ax = plt.subplots()    
-    colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+    colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95']
 
     v=0
     for scope in scopes:    
@@ -569,7 +569,7 @@ for dataset in stats:
     ax.set_xticklabels( vLabels )
     ax.legend( [x[0] for x in rects] , ['Title Only', 'Body Only', 'Title+Body'], loc='upper left' )
     
-    plt.ylim(0,100)    
+    plt.ylim(0)    
     
     def autolabel(rects):
         # attach some text labels
@@ -620,7 +620,7 @@ width = 0.15       # the width of the bars
 fig, ax = plt.subplots()
         
         
-colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#b16ac8']
+colors = ['#008ab8','#00b88a','#F2B844','#EA764B','#e24244', '#bf5d95']
     
 v=0  
 

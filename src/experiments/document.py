@@ -65,7 +65,7 @@ class Document:
                 token += " " + toekens[i+j]
             result.append(token)
         
-        return result
+        return toekens + result
             
     def _tokenizeOneGram(self, line):
         line = line.strip()
