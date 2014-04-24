@@ -27,7 +27,7 @@ for root, _, files in os.walk('../../results'):
     for f in files:
         fullpath = os.path.join(root, f)
         print fullpath
-        if fullpath.endswith('.txt'):
+        if fullpath.endswith('.txt') and 'synonym3' not in fullpath and 'all' in fullpath and 'ombined' in fullpath:
             stats = open(fullpath).readline()
             if len(stats) > 0:
                 #decode the first line of each file
@@ -66,6 +66,6 @@ print '\n\n------ ndcg ------'
 for i in sorted(allstats):
     for j in sorted(allstats):
         if (('Python' in i and 'Python' in j) or ('English' in i and 'English' in j) or ('Combined' in i and 'Combined' in j)) and 'all' in i and 'all' in j:
-            t,p = st.ttest_ind(allstats[i]['NDCG'],allstats[j]['NDCG'])
+            t,p = st.ttest_rel(allstats[i]['NDCG'],allstats[j]['NDCG'])
             if p<=.05:
                 print i,j,(p<=.05),p                
