@@ -29,6 +29,9 @@
 \documentclass{acm_proc_article-sp}
 \usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{balance}
+
+
 \begin{document}
 
 \title{Finding Similar Questions from Community-based QA Services}
@@ -144,11 +147,18 @@ Exchange.com.
 The third dataset combines the English and Python datasets into a single, multi-domain dataset.
 
 
-\section{Related Works}
-A batch of research has been done on this topic. The relative original work was published by  in Jone in 2005 \cite{jeon2005finding}. Jone used a machine translation model, the IBM Model 1, to compare the similarity of two questions.  A series of research followed, and numerous approaches had been published. 
-Of particular interest to us is Wang et al. \cite{wang2009syntactic}. These researchers employed a syntactic tree kernel for finding similar questions in CQA archives. They parsed the questions into syntactic trees and used the similarity of the syntactic trees of the query question and the historical question to rank historical questions. 
-Cao et al. \cite{cao2009use} proposed a framework embodies that use language models to exploit categories of questions for improving similar questions  search.   
-Jijkoun and Rijke \cite{jijkoun2005retrieving} used heuristic extraction and supervised learning methods to extract QA pairs from FAQ pages, and used a vector space model to find QA pairs.  
+\section{Related Work}
+A batch of research has been done on this topic. The original work in this area was published by  Jone in 2005 \cite{jeon2005finding}. Jone used a machine translation model, the IBM Model 1, to compare the similarity of two questions.  A series of research followed , and numerous approaches have been published \cite{cao2009use, jijkoun2005retrieving, wang2009syntactic, millar2006performance, liu2009searching}. %feel free to add a few more citations here
+
+Of particular interest to us is Wang et al. \cite{wang2009syntactic}. These researchers employed a syntactic tree kernel for finding similar questions in CQA archives. They parsed the questions into syntactic trees and used the similarity of the syntactic trees of the query question and the historical question to rank historical questions. The proposed system is complicated, but the main idea within the work was that nouns and verbs receive higher priority within the system. We test this idea (that nouns and verbs should receive higher weight) in our work.
+
+Millar et al. \cite {millar2006performance} presents a large-scale information retrieval system TELLTALE, which can find similar documents from within a gigabyte of text data with high speed.  The researchers represented documents by a vector of N-grams, which is a word sequence of length n extracted from a document. The similarity between two document vectors is then calculated as the cosine of the two representation vectors. In this work, we make use of the idea of N-grams to improve searching efficiency.
+ 
+Liu et al. \cite{liu2009searching} utilized a word relevance model which uses a  statistical method to find semantically related words. Those semantically related words become a measure to determine semantic relatedness questions. We took inspiration from this work, particularly the idea of semantically related words. We tested the idea of extending the basic bag-of-words vector to include synonyms. 
+
+
+
+
 
 
 \section{System Design}
@@ -189,22 +199,22 @@ There one final problem we met when collecting the data. To prevent malicious re
 After data collection, it requires preprocessing. We consider one question as a document, and attempt to capture all of the alphanumeric words within the document. All non-alphanumeric characters (punctuation, spaces, etc.) were considered word separators. This means that compound words connected by a hyphen (`-’) and contractions (such as ``can’t”) are separated into two distinct words. During data cleaning, we also remove all hyperlinks because they contribute little to the message contained within the document, but take up much space in our indexes. For each document, we store each token and the number of occurrences within the document. This tokenization is the initial form of the vector. A term can be considered one dimension of that vector, while all terms with zero occurrences in a document have an assumed dimensional value of 0.
 
 
-\subsection{Create Vectorizers}
+\subsection{Vector Creation}
 As mentioned above, the contribution of our work is in the testing of the simple ideas proposed by researchers within their complex systems. We use their ideas in the formation of the vector and then use a single similarity metric (cosine) across all experiments to be sure that the vector is the only variant. We call these vector-definers `vectorizers’. We have three vectorizers: N-gram, synonym, and NounVerb. We use simple TF-IDF weighting on the original vector described in Section X as our baseline. TF indicates term frequency and IDF is inverse document frequency. 
 
-\subsubsection{N-gram}
+\subsubsection{N-grams}
 A compound noun is combined a sequence of two or more words that describe a single person, place, or thing. These kinds of words are unintentionally ignored in the bag-of-words vector model utilized by many systems. To solve this problem, we (and the authors of \cite{millar2006performance} before us) add N-grams to the original vector. N-grams are phrases taken directly from the document of length N.  To generate the N-gram vector for a document, each consecutive set of terms N terms is considered an additional dimension in the vector space. Figure X depicts the bag of words for the phrase ``for loop in python” with added N-grams (N=2).
 
 The weight of N-gram dimension in the vector space is the TFIDF value of the N-gram (calculated the same way as individual tokens). We conducted experiments for N=2 and N=3. 
 
-\subsubsection{Synonym}
-Often there exists many words to express the same sentiment and question-askers might use any of these words when composing their questions. Therefore, the authors of \cite{liu2009searching} propose adding synonyms for each word in the vector. We do this using Wordnet in NLTK (Natural Language Toolkit) \cite{NLTK}. This tool finds similarity between words and provides the synonyms of a word. Some synonyms often fail to convey semantic similarity, but we claim that it is worth trying. Figure X shows the bag of words after the phrase ``for loop in python” exits the Synonym vectorizer. 
+\subsubsection{Synonyms}
+Often there exists many words to express the same sentiment and question-askers might use any of these words when composing their questions. Therefore, the authors of \cite{liu2009searching} propose adding synonyms for each word in the vector. We do this using Wordnet in NLTK (Natural Language Toolkit) \cite{bird2009natural}. This tool finds similarity between words and provides the synonyms of a word. Some synonyms often fail to convey semantic similarity, but we claim that it is worth trying. Figure X shows the bag of words after the phrase ``for loop in python” exits the Synonym vectorizer. 
 
 The weight of each added synonym is the TF-IDF value of the original word (to which the new word is a synonym) multiplied by the Wordnet supplied similarity  score (in the range of 0-1) between the two words. So, a synonym that is very similar to the original word would have a weight very close to the original word, while a synonym that is only marginally similar to the original word will have a very small weight.
 
 We conducted experiments with 1 added synonym and 2 added synonyms. We collected preliminary results for 3 synonyms, but due to poor results and long runtimes, we discontinued those experiments.
 
-\subsubsection{Weighting nouns and verb}
+\subsubsection{Noun \& Verb Weighting}
 The authors of \cite{wang2009syntactic} suggest weighting nouns and verbs more heavily than other words because they contribute more to the meaning of the sentence. The authors believe that different parts of the sentence have varying importance, and the nouns and verbs are considered to be more important than other types of terms such as articles, adjectives or adverbs. Hence, we boost up the nodes of verb and noun phrases, to show their higher priority over other ordinary ones. The authors of \cite{wang2009syntactic} suggest weighting non-nouns and non-verbs normally (for us that means TFIDF), but boosting the weight of nouns and verbs by a factor of 1.2 (TFIDF*1.2). For tagging nouns and verbs, we use NLTK tagging.
 
 \subsection{Calculate Similarity}
@@ -212,7 +222,7 @@ Though the composition of the vectors is variable, it is important for purposes 
 
 We determine the cosine scores between each document and every other document in the dataset. We then rank (sort) those scores into descending order. Each of these document orderings is called a ranking. 
 
-\section{Result and Analysis}
+\section{Results and Analysis}
 \subsection{Statistics \& Measures}
 We collected several statistics in order to determine which vectorizers, in combination with our cosine similarity function, will provide the best-ranked list of similar questions. 
 \begin{enumerate}[noitemsep]
@@ -227,7 +237,7 @@ Of the NDCG scores, we collected the mean, median, mode, standard deviation, max
 In sum, we ran approximately 65 experiments to determine how the various methods of representing questions performed stacked up against one another. We tested each vectorizer (NGram 2, NGram 3, NounVerb, Synonym 1, Synonym 2, and the baseline TFIDF) against each each of the three datasets (Python, English, and Combined Python+English), and each of the three question scopes (question title only, question body only, question title + body). 
 Note that the above-mentioned list only equates to 54 experiments (6 vectorizers x 3 datasets x 3 scopes). We additionally ran preliminary experiments for Synonym 3, but due to its extremely low performance and long runtimes (about 8 hours each), we ceased running experiments of that type.
 
-\subsection{Result}
+\subsection{Results \& Discussion}
 Of the three question scopes (question title only, question body only, question title + body), we found (not surprisingly) that title+body performed best across all vectorizers and all datasets. Figure \ref{fig:toprankmedians} shows the median TopRank scores for each dataset, vectorizer, and scope. The Title+Body scope provided median TopRanks three times better (on average) than titles alone. For this reason, the remainder of results discussed will be for the Title+Body question scope.
 
 \begin{figure}[!htb]
@@ -255,25 +265,32 @@ We were surprised to find that only one vectorizer (N-Gram 2) outperformed our b
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\columnwidth]{images/all-means-by-dataset_plot.pdf}
-\caption{Means and standard deviations of NDCG results across all datasets and vectorizers for Title+Body scope.}
+\caption{Means and standard deviations of NDCG results across all datasets and vectorizers for Title+Body scope. Higher values indicate better results}
 \label{fig:allmeans}
 \end{figure}
 
 	
-Figure X shows the Percent@Rank1 for each vectorizer and dataset (higher values indicate better results). In terms of Percent@Rank1, both NGram vectorizers tested (2 and 3) performed better than the baseline TFIDF across all datasets. 
+Figure \ref{fig:allpercent} shows the Percent@Rank1 for each vectorizer and dataset (higher values indicate better results). In terms of Percent@Rank1, both NGram vectorizers tested (2 and 3) performed better than the baseline TFIDF across all datasets. 
 
 \begin{figure}[h]
 \centering
 \includegraphics[width=1\columnwidth]{images/all-percent@rank1-by-dataset_plot.pdf}
-\caption{Means and standard deviations of NDCG results across all datasets and vectorizers for Title+Body scope.}
-\label{fig:allmeans}
+\caption{Percentage of questions that received the optimal TopRank score of 1. Higher values indicate better results.}
+\label{fig:allpercent}
 \end{figure}
 	
-Figure X shows the median TopRank for each vectorizer and dataset (lower values indicate better results). Though the mean TopRank scores show few significant differences, the medians shown in Figure X indicate that more results from the NGram 2 vectorizer would be found satisfactory by users.
+Figure \ref{fig:allmedians} shows the median TopRank for each vectorizer and dataset (lower values indicate better results). Though the mean TopRank scores show few significant differences, the medians shown in Figure \ref{fig:allmedians} indicate that more results from the NGram 2 vectorizer would be found satisfactory by users.
 
-$[all-median-topRanks-by-dataset_plot]$
+\begin{figure}[h]
+\centering
+\includegraphics[width=1\columnwidth]{images/all-median-topRanks-by-dataset_plot.pdf}
+\caption{Medians of TopRank scores across all datasets and vectorizers for Title+Body scope. Lower values indicate better results.}
+\label{fig:allmedians}
+\end{figure}
 
 	Across all statistics, we found that the NounVerb vectorizer performed about as well as TFIDF for all datasets and question scopes (no statistically significant differences). Though this may have increased performance for \cite{wang2009syntactic}, increased weighting for nouns and verbs  made no difference in our system.
+
+\balance
 
 
 \section{Conclusion}
