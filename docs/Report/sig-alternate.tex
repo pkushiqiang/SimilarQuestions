@@ -30,6 +30,7 @@
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage{balance}
+\usepackage{amsmath}
 
 
 \begin{document}
@@ -109,36 +110,16 @@ Jung In Koh\\
 
 \maketitle
 \begin{abstract}
-This paper provides a sample of a \LaTeX\ document which conforms to
-the formatting guidelines for ACM SIG Proceedings.
-It complements the document \textit{Author's Guide to Preparing
-ACM SIG Proceedings Using \LaTeX$2_\epsilon$\ and Bib\TeX}. This
-source file has been written with the intention of being
-compiled under \LaTeX$2_\epsilon$\ and BibTeX.
+	As community-based Q\&A services gain momentum and popularity, question-askers are at risk of asking a question which has already been answered. Such sites encourage question-askers to research other questions so as not to repeat, but often semantically similar questions can be phrased using entirely different language, thus making it difficult to query and research. Many researchers have investigated ways to get accurate question similarities. In this paper, we implement basic ideas of some of related studies to see how these ideas stack up against one another.  We also introduce (and perform experiments on) three new datasets, collected and labeled using the new StackExchange API.
 
-The developers have tried to include every imaginable sort
-of ``bells and whistles", such as a subtitle, footnotes on
-title, subtitle and authors, as well as in the text, and
-every optional component (e.g. Acknowledgments, Additional
-Authors, Appendices), not to mention examples of
-equations, theorems, tables and figures.
-
-To make best use of this sample document, run it through \LaTeX\
-and BibTeX, and compare this source code with the printed
-output produced by the dvi file.
 \end{abstract}
 
-% A category with the (minimum) three required fields
-\category{H.4}{Information Systems Applications}{Miscellaneous}
-%A category including the fourth, optional field follows...
-\category{D.2.8}{Software Engineering}{Metrics}[complexity measures, performance measures]
+\terms{Information Retrieval}
 
-\terms{Theory}
-
-\keywords{ACM proceedings, \LaTeX, text tagging} % NOT required for Proceedings
+\keywords{cosine similarity, community-base Q\&A} % NOT required for Proceedings
 
 \section{Introduction}
-Traditionally people found knowledge in books, the classroom or by asking anyone they could reach. With the recent popularity of web-based community question and answer (CQA) sites, like Yahoo Answers, Stackoverflow.com, Quora etc., people now frequently use these channels to ask their questions, especially in technical areas. Often, however, the question a user wants to post has been posted before. Most CQA websites ask users to search a question before posting it, with the idea that if a user could find similar questions, they can get the answer immediately without waiting for someone to answer their question. However, searching for similar questions is not trivial. Even if two questions have the same meaning, they could appear in totally different way.  For example, ``How can I express a for loop in Python?" and ``Is there any way to iterate through a range of integers?" are two similar questions, but they neither share many common words nor follow identical syntactic structure. 
+Traditionally people found knowledge in books, the classroom or by asking anyone they could reach. With the recent popularity of web-based community question and answer (CQA) sites, like Yahoo Answers, Stackoverflow.com, Quora, and etc., people now frequently use these channels to ask their questions, especially in technical areas. Often, however, the question a user wants to post has been posted before. Most CQA websites ask users to search a question before posting it, with the idea that if a user could find similar questions, they can get the answer immediately without waiting for someone to answer their question. However, searching for similar questions is not trivial. Even if two questions have the same meaning, they could appear in totally different way.  For example, ``How can I express a for loop in Python?" and ``Is there any way to iterate through a range of integers?" are two similar questions, but they neither share many common words nor follow identical syntactic structure. 
 
 Much work has been done regarding this topic, but most involve quite simple ideas buried deep within a complex system. In this project, we decouple the simple ideas from the complex systems and compare them against one another in a single system. We used a bag-of-words vector model and cosine as our similarity measure. We formed the vectors according to the simple ideas recommended by other researchers. These vectorizers modify the original document (baseline TFIDF) by: adding synonyms, increasing weight of nouns and verbs, and adding N-gram (phrases of length N). The goal of this work is to test the validity and comparative benefits of these ideas.
 
@@ -184,19 +165,19 @@ The whole system process the data in five steps which  is shown in Figure \ref{f
 \subsection{Data Collection}
 StackExchange is a fast-growing network of 119 question and answer sites on diverse topics from software programming to cooking, photography to gaming. We selected two sub-sites from the StackExchange network, one is StackOverflow, which is the main site for programing questions, and has more than 700,000 questions. For our experiments, we collected all questions with tag Python, which has about 280,000 questions. The other sub-site we selected is English.StackExchange.com, which focuses on English questions regarding items like grammar or word usage. Since the number of the questions on this site is not large (35,600 in total) we used all the questions on this site.  
 
-As all researchers in this domain know, datasets must be labelled in order to collect statistics regarding similarity and ranking. We chose to let the structure of the questions themselves contribute to this ranking. Many StackExchange contributors will provide links to other questions as part of their answer, i.e. ``This question was answered in this other thread. Check it out and see if it helps.” These links are stored by StackExchange as bidirectional edges between questions. So, if document A contains a link to document B, then a link exists between A and B, as well as B and A. We are aware that there likely exist questions that are similar but were not linked, and attempt to account for that by using only two relevance scores: a score of 1 indicates known similarity, whereas a score of 0 indicates unknown similarity. We utilize these scores in our NDCG statistics, discussed in Section X. As an additional precaution (and to limit experiment runtime), we disregarded collected questions that had no links. In total, there are 9291 questions in the Python dataset, 7693 in the English dataset, and 17,243 in the combined dataset. 
+As all researchers in this domain know, datasets must be labelled in order to collect statistics regarding similarity and ranking. We chose to let the structure of the questions themselves contribute to this ranking. Many StackExchange contributors will provide links to other questions as part of their answer, i.e. ``This question was answered in this other thread. Check it out and see if it helps." These links are stored by StackExchange as bidirectional edges between questions. So, if document A contains a link to document B, then a link exists between A and B, as well as B and A. We are aware that there likely exist questions that are similar but were not linked, and attempt to account for that by using only two relevance scores: a score of 1 indicates known similarity, whereas a score of 0 indicates unknown similarity. We utilize these scores in our NDCG statistics, discussed in Section X. As an additional precaution (and to limit experiment runtime), we disregarded collected questions that had no links. In total, there are 9291 questions in the Python dataset, 7693 in the English dataset, and 17,243 in the combined dataset. 
 
 StackExchange provides REST style APIs which allowed us to gather for each question a title, a description (question body), linked questions, and a unique identifier. We used two specific API calls to collect the data:
 
 1. /questions : This allowed us to get all the questions on the site. This method allows requesters to make fairly flexible queries across the entire corpus of questions on a site. For example, getting all questions asked in the the week of Jan 1st 2011 with scores of 10 or more is a single query with parameters sort=votes\&min=10\&fromdate=129384. The parameters we used in this experiment are: website, tag, start, pageSize  etc. 
 
-2. /questions/{ids}/linked:  This call allowed us to procure questions which link to those questions identified in {ids}.  This method only considers questions that are linked within a site, and will never return questions from another StackExchange site. Two questions are considered "linked" when one question explicitly includes a hyperlink to the other question, there are no other heuristics.
+2. /questions/{ids}/linked:  This call allowed us to procure questions which link to those questions identified in {ids}.  This method only considers questions that are linked within a site, and will never return questions from another StackExchange site. Two questions are considered   ``linked" when one question explicitly includes a hyperlink to the other question, there are no other heuristics.
 
 There one final problem we met when collecting the data. To prevent malicious requests,  the server of StackExchange uses a time window to control the request number, like  100 requests every 15 minutes. So we needed to cut speed of our data collection program by forcing it to sleep for a designated number of seconds. The other strategy the server used to prevent malicious requests is that after some thousands of requests, the server will block the client IP. To combat this, we needed to change our physical location frequently to use new IP addresses.
 
 
 \subsection{Tokenization (Data Cleaning)}
-After data collection, it requires preprocessing. We consider one question as a document, and attempt to capture all of the alphanumeric words within the document. All non-alphanumeric characters (punctuation, spaces, etc.) were considered word separators. This means that compound words connected by a hyphen (`-’) and contractions (such as ``can’t”) are separated into two distinct words. During data cleaning, we also remove all hyperlinks because they contribute little to the message contained within the document, but take up much space in our indexes. For each document, we store each token and the number of occurrences within the document. This tokenization is the initial form of the vector. A term can be considered one dimension of that vector, while all terms with zero occurrences in a document have an assumed dimensional value of 0.
+After data collection, it requires preprocessing. We consider one question as a document, and attempt to capture all of the alphanumeric words within the document. All non-alphanumeric characters (punctuation, spaces, etc.) were considered word separators. This means that compound words connected by a hyphen (`-') and contractions (such as ``can't") are separated into two distinct words. During data cleaning, we also remove all hyperlinks because they contribute little to the message contained within the document, but take up much space in our indexes. For each document, we store each token and the number of occurrences within the document. This tokenization is the initial form of the vector. A term can be considered one dimension of that vector, while all terms with zero occurrences in a document have an assumed dimensional value of 0.
 
 
 \subsection{Vector Creation}
@@ -219,7 +200,9 @@ The authors of \cite{wang2009syntactic} suggest weighting nouns and verbs more h
 
 \subsection{Calculate Similarity}
 Though the composition of the vectors is variable, it is important for purposes of comparison that the similarity function remain static. We use cosine to determine the similarity between two documents. Cosine similarity is a measure of the angle between two vectors. Two identical vectors will have a cosine score of 1. The equation is described below.
-
+\begin{equation}
+\cos(doc1,doc2) =  \frac{|doc1||doc2|}{\sqrt{doc1}\sqrt{doc2}}
+\end{equation}
 We determine the cosine scores between each document and every other document in the dataset. We then rank (sort) those scores into descending order. Each of these document orderings is called a ranking. 
 
 \section{Results and Analysis}
