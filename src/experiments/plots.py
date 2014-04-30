@@ -627,22 +627,22 @@ v=0
 for i in range(len(vMeans)):
     #print 'vmeansi',vMeans[i]
     #rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=np.array(vStdev[i]))]
-    rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i]), width, color=colors[v], yerr=0,error_kw=dict(ecolor='black', lw=1, capsize=5, capthick=1))]
+    rects += [ax.bar(ind+(width*(v)), np.array(vMeans[i])*100, width, color=colors[v], yerr=0,error_kw=dict(ecolor='black', lw=1, capsize=5, capthick=1))]
     v+=1
 
 # add some
-ax.set_ylabel('Scores')
-ax.set_title('Mean % Questions With Similar Ranked 1 For Title+Body Across Datasets')
+ax.set_ylabel('Percent of Questions with TopTank of 1 (%)')
+ax.set_title('Percent of Questions With TopRank of 1 For Title+Body Across Datasets')
 ax.set_xticks(ind+width)
 ax.set_xticklabels( datasets )
 ax.legend( [x[0] for x in rects] , vectorizers, loc='upper left' )
-plt.ylim(0,.5)    
+plt.ylim(0,50)    
 
 def autolabel(rects):
     # attach some text labels
     for rect in rects:
         height = rect.get_height()
-        ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, ('%.2f'%height).lstrip('0'),
+        ax.text(rect.get_x()+rect.get_width()/2., 1.05*height, ('%.0f'%(height)).lstrip('0'),
                 ha='center', va='bottom')
 
 for rect in rects:
