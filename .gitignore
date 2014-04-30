@@ -5,3 +5,9 @@ python_questions_with_body.txt
 data/english_linked.txt
 
 *.bat
+
+*.aux
+
+*.log
+
+*.gz
