@@ -569,7 +569,7 @@ for dataset in stats:
     ax.set_xticklabels( vLabels )
     ax.legend( [x[0] for x in rects] , ['Title Only', 'Body Only', 'Title+Body'], loc='upper left' )
     
-    plt.ylim(0)    
+    plt.ylim(0,130)    
     
     def autolabel(rects):
         # attach some text labels
